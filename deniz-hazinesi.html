@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="tr" class="[color-scheme:light_dark]">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Derin Deniz Hazinesi · Demo Slot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body class="min-h-screen overflow-x-clip font-[Nunito,system-ui,sans-serif] text-base/normal font-semibold text-[#0b2a3d] [background:radial-gradient(circle,rgba(255,255,255,.45)_0_2px,transparent_2.5px)_0_0/34px_34px,radial-gradient(circle,rgba(255,255,255,.3)_0_1.5px,transparent_2px)_17px_11px/52px_52px,linear-gradient(#c4eefa,#3c9fcc)] dark:text-[#e3f6ff] dark:[background:radial-gradient(circle,rgba(127,243,255,.18)_0_2px,transparent_2.5px)_0_0/34px_34px,radial-gradient(circle,rgba(127,243,255,.12)_0_1.5px,transparent_2px)_17px_11px/52px_52px,linear-gradient(#073049,#020d17)]">
+
+<svg width="0" height="0" class="absolute" aria-hidden="true">
+  <defs>
+<linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1a6"/>
+      <stop offset=".45" stop-color="#f7c948"/>
+      <stop offset="1" stop-color="#b8860b"/>
+    </linearGradient>
+    <linearGradient id="g-wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8743a"/>
+      <stop offset="1" stop-color="#7a4419"/>
+    </linearGradient>
+    <radialGradient id="g-glow">
+      <stop offset="0" stop-color="#e6fdff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#7ff3ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g-pearl" cx=".35" cy=".3">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".6" stop-color="#f1e6ff"/>
+      <stop offset="1" stop-color="#c9b3ea"/>
+    </radialGradient>
+    <radialGradient id="g-bubble" cx=".35" cy=".3">
+      <stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".5" stop-color="#9ff3ff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#2ab7e6" stop-opacity=".9"/>
+    </radialGradient>
+    <clipPath id="clip-fish">
+      <ellipse cx="44" cy="50" rx="30" ry="20"/>
+    </clipPath>
+    <symbol id="sym-3" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M16 50Q18 14 50 12Q82 14 84 50Q50 38 16 50z" fill="#b98ef0" stroke="#7c55c4" stroke-width="2"/>
+      <path d="M50 15V42M37 18L31 45M63 18L69 45M25 27L20 48M75 27L80 48" stroke="#9b72de" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M12 58h76c0 16-17 28-38 28S12 74 12 58z" fill="#9a6fd8" stroke="#6a45b0" stroke-width="2"/>
+      <path d="M50 64v20M37 64l-3 18M63 64l3 18M25 63l-5 13M75 63l5 13" stroke="#7c55c4" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="50" cy="58" rx="34" ry="6" fill="#5a3596"/>
+      <circle cx="50" cy="51" r="13" fill="url(#g-pearl)"/>
+      <circle cx="45" cy="46" r="3.5" fill="#fff"/>
+    </symbol>
+    <symbol id="sym-4" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <g stroke="#e0456b" stroke-width="9" fill="none" stroke-linecap="round">
+        <path d="M32 54q-12 10-8 22 3 8 10 5"/>
+        <path d="M43 58q-4 14 0 26"/>
+        <path d="M57 58q4 14 0 26"/>
+        <path d="M68 54q12 10 8 22-3 8-10 5"/>
+      </g>
+      <g fill="#ffb3c4">
+        <circle cx="25" cy="70" r="1.8"/><circle cx="41" cy="72" r="1.8"/><circle cx="59" cy="72" r="1.8"/><circle cx="75" cy="70" r="1.8"/>
+      </g>
+      <path d="M22 46C22 23 35 12 50 12S78 23 78 46c0 10-12 16-28 16S22 56 22 46z" fill="#f0567a"/>
+      <path d="M32 26c4-7 10-10 17-11" stroke="#ff9db5" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="40" cy="38" r="7" fill="#fff"/><circle cx="60" cy="38" r="7" fill="#fff"/>
+      <circle cx="41" cy="39" r="3.5" fill="#2a1030"/><circle cx="61" cy="39" r="3.5" fill="#2a1030"/>
+      <path d="M44 50q6 5 12 0" stroke="#8a1f3c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="32" cy="48" r="3" fill="#ff8fb0"/><circle cx="68" cy="48" r="3" fill="#ff8fb0"/>
+      <circle cx="62" cy="21" r="2.5" fill="#ff9db5"/><circle cx="69" cy="28" r="2" fill="#ff9db5"/>
+    </symbol>
+    <symbol id="sym-5" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M72 52l18-14v28z" fill="#f4a52a"/>
+      <path d="M48 20v-7M31 26l-4-6M65 26l4-6M21 40l-6-3M21 64l-6 3M31 78l-4 6M48 84v7M65 78l4 6M76 36l5-4M76 68l5 4" stroke="#d9901c" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="48" cy="52" r="28" fill="#ffcc4d"/>
+      <path d="M22 60q26 26 52 0q-26 8-52 0z" fill="#fff1c4"/>
+      <g fill="#e0a030"><circle cx="58" cy="36" r="2.5"/><circle cx="66" cy="46" r="2"/><circle cx="50" cy="30" r="2"/><circle cx="62" cy="56" r="2"/></g>
+      <path d="M30 34c4-6 9-9 15-10" stroke="#fff0b3" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="36" cy="45" r="7" fill="#fff"/><circle cx="34" cy="46" r="3.5" fill="#2b1a05"/>
+      <circle cx="22" cy="56" r="3" fill="#c0392b"/>
+      <path d="M50 54q9 5 5 14" stroke="#f4a52a" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="sym-6" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <g stroke="#c22f1f" stroke-width="5" stroke-linecap="round" fill="none">
+        <path d="M28 62l-14 6M28 68l-12 11M31 73l-7 12M72 62l14 6M72 68l12 11M69 73l7 12"/>
+        <path d="M32 52L21 40M68 52L79 40"/>
+        <path d="M43 46l-3-12M57 46l3-12"/>
+      </g>
+      <path d="M20 34L14 23.6A12 12 0 1 0 24.1 22.7Z" fill="#e8432f"/>
+      <path d="M80 34L86 23.6A12 12 0 1 1 75.9 22.7Z" fill="#e8432f"/>
+      <ellipse cx="50" cy="60" rx="26" ry="17" fill="#e8432f"/>
+      <path d="M32 54c4-6 10-9 17-9" stroke="#ff8a74" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="40" cy="31" r="6" fill="#fff"/><circle cx="60" cy="31" r="6" fill="#fff"/>
+      <circle cx="40" cy="32" r="3" fill="#2a0d08"/><circle cx="60" cy="32" r="3" fill="#2a0d08"/>
+      <path d="M43 64q7 6 14 0" stroke="#8a1a10" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="sym-7" viewBox="0 0 100 100">
+<g stroke="#e7c9ff" stroke-width="4" fill="none" stroke-linecap="round">
+        <path d="M32 54q-5 10 1 18t-1 18"/>
+        <path d="M44 56q-4 10 2 18t0 16"/>
+        <path d="M56 56q4 10-2 18t0 16"/>
+        <path d="M68 54q5 10-1 18t1 18"/>
+      </g>
+      <path d="M22 54C22 28 35 14 50 14S78 28 78 54q-7 6-14 0-7 6-14 0-7 6-14 0-7 6-14 0z" fill="#c48cff"/>
+      <path d="M30 40c3-11 10-17 19-18" stroke="#ecd9ff" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="43" cy="40" r="3" fill="#3a1060"/><circle cx="57" cy="40" r="3" fill="#3a1060"/>
+      <circle cx="37" cy="46" r="3" fill="#f08ad8"/><circle cx="63" cy="46" r="3" fill="#f08ad8"/>
+      <path d="M46 46q4 3 8 0" stroke="#3a1060" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="sym-8" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M50.0 12.0L60.6 37.4L88.0 39.6L67.1 57.6L73.5 84.4L50.0 70.0L26.5 84.4L32.9 57.6L12.0 39.6L39.4 37.4Z" fill="#ff8a3d" stroke="#ff8a3d" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M50.0 22.0L57.6 41.5L78.5 42.7L62.4 56.0L67.6 76.3L50.0 65.0L32.4 76.3L37.6 56.0L21.5 42.7L42.4 41.5Z" fill="#ffa25e"/>
+      <g fill="#ffd0a6">
+        <circle cx="50" cy="30" r="2.5"/><circle cx="50" cy="40" r="2"/>
+        <circle cx="30" cy="46" r="2.5"/><circle cx="70" cy="46" r="2.5"/>
+        <circle cx="37" cy="68" r="2.5"/><circle cx="63" cy="68" r="2.5"/>
+        <circle cx="50" cy="52" r="3"/>
+      </g>
+    </symbol>
+    <symbol id="sym-9" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M70 50l20-16v32z" fill="#1f8fe0"/>
+      <path d="M36 33q12-18 28-3z" fill="#1f8fe0"/>
+      <path d="M40 68q8 12 18 4z" fill="#1f8fe0"/>
+      <ellipse cx="44" cy="50" rx="30" ry="20" fill="#3db8ff"/>
+      <g clip-path="url(#clip-fish)" stroke="#fff" stroke-width="6" fill="none">
+        <path d="M38 28q-7 22 0 44M56 28q-6 22 0 44"/>
+      </g>
+      <path d="M22 42c3-6 8-9 14-10" stroke="#a8e2ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="25" cy="47" r="6" fill="#fff"/><circle cx="24" cy="48" r="3" fill="#0a2236"/>
+      <path d="M15 55q3 2 6 0" stroke="#0a2236" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="sym-10" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M40 82h20l-3 8H43z" fill="#e07a6b"/>
+      <path d="M50 84L-15.8 61.3Q-19.3 47.9 -5.5 43.5Q-4.6 29.8 9.8 29.5Q15.1 16.7 29.0 20.6Q38.0 9.8 50.0 17.5Q62.0 9.8 71.0 20.6Q84.9 16.7 90.2 29.5Q104.6 29.8 105.5 43.5Q119.3 47.9 115.8 61.3Z" fill="#ffb3a7" stroke="#e07a6b" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M50 80L-0.8 47.0M50 80L13.3 34.2M50 80L30.8 26.0M50 80L50.0 23.2M50 80L69.2 26.0M50 80L86.7 34.2M50 80L100.8 47.0" stroke="#e8897a" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M30 36c6-8 13-12 21-13" stroke="#ffe0da" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="sym-11" viewBox="0 0 100 100">
+<ellipse cx="50" cy="86" rx="30" ry="7" fill="#8a6f5c"/>
+      <g stroke="#ff6b8a" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 84V54M50 66L33 50V34M50 60L67 44V28M33 50l-11-8M67 44l11-6M50 54V36M33 40l-7-6"/>
+      </g>
+      <g fill="#ff9db0">
+        <circle cx="33" cy="32" r="5"/><circle cx="67" cy="26" r="5"/><circle cx="50" cy="34" r="5"/>
+        <circle cx="21" cy="41" r="4.5"/><circle cx="79" cy="37" r="4.5"/><circle cx="25" cy="33" r="4"/>
+      </g>
+    </symbol>
+    <symbol id="sym-1" viewBox="0 0 100 100">
+<circle cx="50" cy="52" r="48" fill="url(#g-glow)"/>
+      <g fill="url(#g-gold)" stroke="#b8860b" stroke-width="1.5">
+        <circle cx="36" cy="28" r="7"/><circle cx="64" cy="28" r="7"/><circle cx="50" cy="22" r="8"/>
+      </g>
+      <path d="M16 50V44Q16 30 50 30Q84 30 84 44V50Z" fill="url(#g-wood)" stroke="#5a300f" stroke-width="2"/>
+      <rect x="16" y="50" width="68" height="32" rx="3" fill="url(#g-wood)" stroke="#5a300f" stroke-width="2"/>
+      <path d="M16 47h68v5H16z" fill="url(#g-gold)"/>
+      <path d="M24 31v51M70 31v51" stroke="url(#g-gold)" stroke-width="6"/>
+      <rect x="21" y="58" width="58" height="15" rx="7" fill="#e2553d"/>
+      <text x="50" y="70" font-family="'Baloo 2',sans-serif" font-weight="700" font-size="12" fill="#fff" text-anchor="middle" letter-spacing=".5">BONUS</text>
+      <path d="M84 14l2 6 6 2-6 2-2 6-2-6-6-2 6-2zM14 18l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5z" fill="#fff6b0"/>
+    </symbol>
+    <symbol id="sym-12" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="44" fill="url(#g-glow)" opacity=".7"/>
+      <circle cx="50" cy="46" r="30" fill="url(#g-bubble)" stroke="#e6fdff" stroke-width="2.5"/>
+      <path d="M32 36a20 20 0 0 1 14-12" stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <circle cx="66" cy="58" r="4" fill="#fff" opacity=".7"/>
+      <circle cx="82" cy="20" r="5" fill="none" stroke="#e6fdff" stroke-width="2"/>
+      <circle cx="18" cy="74" r="3.5" fill="none" stroke="#e6fdff" stroke-width="2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div id="app" v-cloak class="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-4 px-[max(3vw,12px)] pt-[clamp(14px,3vw,32px)] pb-6 min-[1000px]:grid-cols-[190px_minmax(0,680px)_190px] min-[1000px]:justify-center min-[1000px]:gap-6 [&[v-cloak]]:invisible [&_button]:cursor-pointer [&_button:focus-visible]:outline-3 [&_button:focus-visible]:outline-offset-2 [&_button:focus-visible]:outline-[#ffcf4d]">
+
+  <header class="col-span-full grid h-[clamp(84px,13vw,104px)] w-[min(560px,100%)] place-content-center justify-self-center overflow-hidden rounded-[22px] border-4 border-[#e9fbff] bg-[#ffcf4d] px-4 text-center text-[#0b3a5c] shadow-[0_6px_0_#c79a1a,0_14px_30px_rgba(0,0,0,.25)]">
+    <h1 class="font-['Baloo_2',sans-serif] text-[clamp(22px,6.5vw,44px)]/[1.15] font-bold whitespace-nowrap [text-shadow:0_3px_0_#e9fbff]">Derin Deniz Hazinesi</h1>
+    <p class="h-5 text-sm/5 font-extrabold whitespace-nowrap">Demo slot · sanal kredi, gerçek para yok</p>
+  </header>
+
+  <aside class="order-3 grid grid-cols-2 gap-3 min-[1000px]:order-none min-[1000px]:grid-cols-1 min-[1000px]:gap-5">
+    <button class="grid h-[184px] grid-rows-[60px_48px_30px] content-center justify-items-center gap-1.5 overflow-hidden rounded-[22px] border-4 border-[#ffcf4d] bg-linear-to-b from-[#1593c4] to-[#0a5784] px-2 text-center text-white shadow-[0_6px_0_#06344f,0_14px_30px_rgba(0,0,0,.3)] transition-transform active:translate-y-[3px] disabled:cursor-not-allowed disabled:opacity-45" :disabled="state.busy || state.ante" :title="state.ante ? 'Bonus şansı ×2 açıkken kullanılamaz' : undefined" @click="buyBonus">
+      <svg class="size-[60px]" viewBox="0 0 100 100" aria-hidden="true"><use href="#sym-1"/></svg>
+      <span class="font-['Baloo_2',sans-serif] text-[18px]/[24px] font-bold whitespace-nowrap max-[1000px]:text-base/[24px]">BONUS<br>SATIN AL</span>
+      <span class="font-['Baloo_2',sans-serif] text-[22px]/[30px] font-bold whitespace-nowrap text-[#ffcf4d]">{{ fmt(buyCost) }}</span>
+    </button>
+
+    <div class="grid h-[184px] grid-rows-[48px_22px_40px_20px] content-center justify-items-center gap-1.5 overflow-hidden rounded-[22px] border-4 border-[#ffcf4d] bg-linear-to-b from-[#1593c4] to-[#0a5784] px-2 text-center text-white shadow-[0_6px_0_#06344f,0_14px_30px_rgba(0,0,0,.3)]">
+      <p class="font-['Baloo_2',sans-serif] text-[18px]/[24px] font-bold whitespace-nowrap max-[1000px]:text-base/[24px]">BONUS ŞANSI<br>×2</p>
+      <p class="text-[13px]/[22px] whitespace-nowrap opacity-85">Bahis <b class="text-[#ffcf4d]">{{ fmt(anteBet) }}</b></p>
+      <button class="relative h-8 w-16 self-center rounded-full transition-colors disabled:cursor-not-allowed disabled:opacity-45" :class="state.ante ? 'bg-[#16b3c9]' : 'bg-black/35'" role="switch" :aria-checked="state.ante" aria-label="Bonus şansı ×2" :disabled="state.busy" @click="toggleAnte">
+        <span class="absolute top-1 left-1 size-6 rounded-full bg-[#e9fbff] shadow-[0_2px_4px_rgba(0,0,0,.35)] transition-transform" :class="{ 'translate-x-8': state.ante }"></span>
+      </button>
+      <p class="text-xs/5 font-extrabold opacity-85">{{ state.ante ? 'AÇIK' : 'KAPALI' }}</p>
+    </div>
+  </aside>
+
+  <main class="order-1 w-full rounded-[30px] border-4 border-[#ffcf4d] bg-linear-to-b p-[clamp(10px,2vw,18px)] min-[1000px]:order-none" :class="state.inFreeSpins ? 'from-[#7b4fd6] to-[#3d1f8f] shadow-[0_8px_0_#26115e,0_24px_50px_rgba(0,0,0,.35)]' : 'from-[#1593c4] to-[#0a5784] shadow-[0_8px_0_#06344f,0_24px_50px_rgba(0,0,0,.35)]'">
+
+    <div v-if="state.inFreeSpins" class="mb-2.5 grid h-[52px] grid-cols-3 items-center overflow-hidden rounded-[14px] bg-black/25 text-center text-white">
+      <p><span class="block text-[11px]/[14px] font-extrabold whitespace-nowrap opacity-85">Bedava dönüş</span><b class="block font-['Baloo_2',sans-serif] text-[20px]/[24px] font-bold whitespace-nowrap text-[#ffcf4d]">{{ state.freeSpinsLeft }}</b></p>
+      <p><span class="block text-[11px]/[14px] font-extrabold whitespace-nowrap opacity-85">Toplam çarpan</span><b class="block font-['Baloo_2',sans-serif] text-[20px]/[24px] font-bold whitespace-nowrap text-[#ffcf4d]">×{{ state.totalMultiplier }}</b></p>
+      <p><span class="block text-[11px]/[14px] font-extrabold whitespace-nowrap opacity-85">Bonus kazancı</span><b class="block font-['Baloo_2',sans-serif] text-[20px]/[24px] font-bold whitespace-nowrap text-[#ffcf4d]">{{ fmt(state.freeSpinsWin) }}</b></p>
+    </div>
+
+    <div ref="board" class="relative grid aspect-[6/5] grid-cols-6 gap-[clamp(3px,.8vw,7px)] rounded-[20px] p-[clamp(5px,1vw,9px)] shadow-[inset_0_5px_16px_rgba(0,0,0,.55)]" :class="state.inFreeSpins ? 'bg-[#1a0d45]' : 'bg-[#05283f]'" aria-label="6 makara, 5 sıra oyun alanı">
+      <div v-for="(column, reel) in grid" :key="reel" class="relative overflow-hidden rounded-xl bg-linear-to-b from-white/7 to-white/2">
+        <div v-for="(cell, row) in column" :key="cell.id" class="absolute inset-x-0 grid h-1/5 place-items-center" :class="[ROW_TOP[row], SYMBOLS[cell.symbol].tint]">
+          <div class="absolute inset-[3%] bg-[radial-gradient(closest-side,var(--tint),transparent)]" :class="cell.win ? 'opacity-90' : 'opacity-45'"></div>
+          <svg v-motion="cell.win ? motion.pulse : cell.boom ? motion.boom : null" class="relative size-[72%] overflow-visible drop-shadow-[0_3px_0_rgba(0,0,0,.28)]" viewBox="0 0 100 100" aria-hidden="true"><use :href="'#sym-' + cell.symbol"/></svg>
+          <b v-if="cell.symbol === CHILI" v-motion="cell.boom ? motion.boom : null" class="absolute inset-x-0 bottom-[4%] text-center font-['Baloo_2',sans-serif] text-[clamp(13px,2.6vw,24px)]/none font-bold text-white [text-shadow:0_2px_0_#062a44,0_0_2px_#062a44,0_0_8px_#7ff3ff]">×{{ cell.multiplier }}</b>
+        </div>
+      </div>
+
+      <div class="pointer-events-none absolute inset-0 grid place-items-center overflow-hidden rounded-[20px]">
+        <span v-for="item in floats" :key="item.id" v-motion="motion.rise" class="col-start-1 row-start-1 whitespace-nowrap font-['Baloo_2',sans-serif] font-bold text-[#ffcf4d] opacity-0 [text-shadow:0_4px_0_#062a44,0_0_18px_rgba(0,0,0,.5)]" :class="item.big ? 'text-[clamp(40px,9vw,80px)]/none' : 'text-[clamp(28px,6vw,54px)]/none'">{{ item.text }}</span>
+      </div>
+
+      <div v-if="bigWin.show" class="absolute inset-0 z-3 grid cursor-pointer place-content-center rounded-[20px] bg-[radial-gradient(circle,rgba(0,40,70,.55),rgba(0,12,28,.88))] text-center text-white" @click="bigWin.skipped = true">
+        <h3 v-motion="motion.wobble" class="font-['Baloo_2',sans-serif] text-[clamp(34px,7vw,64px)]/[1.05] font-bold whitespace-nowrap text-[#ffcf4d] [text-shadow:0_5px_0_#062a44]">{{ bigWin.title }}</h3>
+        <p class="mt-1.5 font-['Baloo_2',sans-serif] text-[clamp(30px,6vw,56px)]/none font-bold">{{ fmt(bigWin.shown) }}</p>
+        <small class="text-[13px] opacity-75">Geçmek için dokun</small>
+      </div>
+    </div>
+  </main>
+
+  <div class="order-2 flex items-center justify-center gap-1.5 min-[400px]:gap-3 min-[1000px]:order-none min-[1000px]:flex-col min-[1000px]:gap-4">
+    <button class="order-5 grid h-11 w-[132px] flex-none place-items-center rounded-[22px] bg-[#e9fbff] text-[15px] font-extrabold whitespace-nowrap text-[#0b3a5c] shadow-[0_3px_0_#7fb6cc] aria-pressed:bg-[#ffcf4d] aria-pressed:text-[#3d2a00] max-[1000px]:order-1 max-[1000px]:h-10 max-[1000px]:w-[76px] max-[1000px]:text-xs" :aria-pressed="state.turbo" @click="toggle('turbo')">TURBO</button>
+
+    <button class="order-2 grid size-12 flex-none place-items-center rounded-full bg-[#e9fbff] text-[#0b3a5c] shadow-[0_3px_0_#7fb6cc] disabled:cursor-not-allowed disabled:opacity-45 max-[1000px]:order-4 max-[1000px]:size-10" :disabled="state.busy || state.betIndex === BET_LEVELS.length - 1" aria-label="Bahsi artır" @click="changeBet(1)">
+      <svg class="size-5" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M3 10h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="relative order-3 grid size-[112px] flex-none place-items-center rounded-full border-5 border-[#e9fbff] bg-[radial-gradient(circle_at_40%_30%,#fff0a8,#ffcf4d_55%,#e6a817)] shadow-[0_6px_0_#8c6200,0_12px_24px_rgba(0,0,0,.35)] transition-transform duration-100 active:translate-y-[3px] active:shadow-[0_3px_0_#8c6200] disabled:cursor-default disabled:brightness-90 disabled:saturate-[.4] max-[1000px]:size-[76px]" :disabled="state.busy && !autoOn" :aria-label="autoOn ? 'Otomatik oyunu durdur' : 'Çevir (boşluk tuşu)'" @click="spin">
+      <svg v-if="autoOn" class="size-[56%]" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="13" y="13" width="22" height="22" rx="4" fill="#0b3a5c"/>
+      </svg>
+      <svg v-else class="size-[56%]" :class="{ 'animate-spin motion-reduce:animate-none': state.busy }" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M38 20A15 15 0 1 0 39 30" stroke="#0b3a5c" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M42 10v13H29z" fill="#0b3a5c"/>
+      </svg>
+      <i v-if="autoOn" class="absolute -right-1.5 -bottom-1.5 h-[22px] min-w-7 rounded-xl bg-[#0b3a5c] px-1.5 font-['Baloo_2',sans-serif] text-sm/[22px] font-bold text-white not-italic">{{ state.autoSpinsLeft }}</i>
+    </button>
+
+    <button class="order-4 grid size-12 flex-none place-items-center rounded-full bg-[#e9fbff] text-[#0b3a5c] shadow-[0_3px_0_#7fb6cc] disabled:cursor-not-allowed disabled:opacity-45 max-[1000px]:order-2 max-[1000px]:size-10" :disabled="state.busy || state.betIndex === 0" aria-label="Bahsi azalt" @click="changeBet(-1)">
+      <svg class="size-5" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="order-1 grid h-11 w-[132px] flex-none place-items-center rounded-[22px] bg-[#e9fbff] text-[15px] font-extrabold whitespace-nowrap text-[#0b3a5c] shadow-[0_3px_0_#7fb6cc] disabled:cursor-not-allowed disabled:opacity-45 max-[1000px]:order-5 max-[1000px]:h-10 max-[1000px]:w-[76px] max-[1000px]:text-xs" :disabled="state.busy" @click="chooseAutoplay">OTOMATİK</button>
+  </div>
+
+  <footer class="order-4 col-span-full grid h-[76px] grid-cols-[136px_312px_minmax(0,1fr)] items-center gap-4 overflow-hidden rounded-[22px] border-4 border-[#ffcf4d] bg-[#05283f] px-4 text-white shadow-[0_6px_0_#06344f,0_14px_30px_rgba(0,0,0,.3)] min-[1000px]:order-none max-[1000px]:h-[164px] max-[1000px]:grid-cols-1 max-[1000px]:grid-rows-[40px_28px_48px] max-[1000px]:content-center max-[1000px]:justify-items-center max-[1000px]:gap-2">
+    <div class="flex h-10 gap-2">
+      <button class="grid size-10 place-items-center rounded-full bg-white/12 hover:bg-white/20" aria-label="Ayarlar" @click="openPanel('settings')">
+        <svg class="size-6" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </button>
+      <button class="grid size-10 place-items-center rounded-full bg-white/12 hover:bg-white/20" aria-label="Ödemeler ve kurallar" @click="openPanel('info')">
+        <svg class="size-6" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 11v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="7.5" r="1.4" fill="currentColor"/></svg>
+      </button>
+      <button class="grid size-10 place-items-center rounded-full bg-white/12 hover:bg-white/20" :aria-label="state.sound ? 'Sesi kapat' : 'Sesi aç'" @click="toggle('sound')">
+        <svg class="size-6" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor"/>
+          <path v-if="state.sound" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path v-else d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="grid h-7 grid-cols-[176px_128px] items-center gap-2 font-extrabold">
+      <p class="overflow-hidden text-sm/7 whitespace-nowrap"><span class="opacity-85">KREDİ</span> <b class="ml-1 font-['Baloo_2',sans-serif] text-lg/7 font-bold text-[#ffcf4d]">{{ fmt(state.balance) }}</b></p>
+      <p class="overflow-hidden text-sm/7 whitespace-nowrap"><span class="opacity-85">BAHİS</span> <b class="ml-1 font-['Baloo_2',sans-serif] text-lg/7 font-bold text-[#ffcf4d]">{{ fmt(spinCost) }}</b></p>
+    </div>
+
+    <div class="grid h-12 w-full content-center overflow-hidden text-center" aria-live="polite">
+      <p v-if="state.lastWin > 0" class="h-[26px] font-['Baloo_2',sans-serif] text-[22px]/[26px] font-bold whitespace-nowrap text-[#ffcf4d]">KAZANÇ {{ fmt(state.lastWin) }}</p>
+      <p class="text-sm/[18px] font-extrabold" :class="state.lastWin > 0 ? 'line-clamp-1' : 'line-clamp-2'">{{ state.message }}</p>
+    </div>
+  </footer>
+
+  <div v-if="panel" class="fixed inset-0 z-10 grid place-items-center bg-[rgba(2,16,28,.65)] p-4" role="dialog" aria-modal="true" @click.self="closePanel" @keydown.esc="closePanel">
+    <div class="relative w-[min(560px,100%)] overflow-y-auto rounded-3xl border-4 border-[#ffcf4d] bg-[#f6fdff] p-[22px] shadow-[0_20px_50px_rgba(0,0,0,.4)] dark:bg-[#0b2536]" :class="panel === 'info' ? 'h-[min(640px,88vh)]' : 'h-[300px]'">
+      <button ref="panelClose" class="absolute top-3 right-3 grid size-10 place-items-center rounded-full bg-[#cde9f2] dark:bg-[#17425c]" aria-label="Kapat" @click="closePanel">
+        <svg class="size-4" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+      </button>
+
+      <template v-if="panel === 'info'">
+        <h2 class="h-10 pr-12 font-['Baloo_2',sans-serif] text-[30px]/10 font-bold whitespace-nowrap text-[#e2553d]">Ödeme tablosu</h2>
+        <p class="mb-2.5 h-5 text-sm/5 whitespace-nowrap text-[#4f7486] dark:text-[#9cc3d4]">Tutarlar seçili bahse göre (taban bahis {{ fmt(baseBet) }}).</p>
+
+        <table class="w-full table-fixed border-collapse text-sm">
+          <thead class="text-[13px] text-[#4f7486] dark:text-[#9cc3d4]">
+            <tr class="h-7">
+              <th class="w-[50px]"></th>
+              <th class="px-0.5 text-left font-extrabold">Sembol</th>
+              <th v-for="label in ['8–9', '10–11', '12+']" :key="label" class="w-[70px] px-0.5 text-right font-extrabold">{{ label }}</th>
+            </tr>
+          </thead>
+          <tbody class="[&_td]:border-t [&_td]:border-dashed [&_td]:border-[#cde9f2] [&_td]:px-0.5 [&_td]:align-middle dark:[&_td]:border-[#17425c] [&>tr]:h-12">
+            <tr v-for="item in paytable.foods" :key="item.symbol">
+              <td><svg class="size-10" viewBox="0 0 100 100" aria-hidden="true"><use :href="'#sym-' + item.symbol"/></svg></td>
+              <td class="truncate font-extrabold">{{ item.name }}</td>
+              <td v-for="(amount, i) in item.amounts" :key="i" class="text-right whitespace-nowrap tabular-nums">{{ amount }}</td>
+            </tr>
+            <tr>
+              <td><svg class="size-10" viewBox="0 0 100 100" aria-hidden="true"><use href="#sym-1"/></svg></td>
+              <td class="text-[13px]/4 font-extrabold whitespace-nowrap">Hazine sandığı<br><small>4 / 5 / 6+</small></td>
+              <td v-for="(amount, i) in paytable.scatter" :key="i" class="text-right whitespace-nowrap tabular-nums">{{ amount }}</td>
+            </tr>
+            <tr>
+              <td><svg class="size-10" viewBox="0 0 100 100" aria-hidden="true"><use href="#sym-12"/></svg></td>
+              <td colspan="4" class="truncate font-extrabold">Sihirli kabarcık: kazancı ×2 – ×100 katlar</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul class="mt-3 list-disc pl-[18px] text-sm/[1.45] [&>li]:mb-1.5">
+      <li><b>Her yerde öder:</b> çizgi yok; aynı deniz canlısından 8+ tane kazandırır.</li>
+      <li><b>Akıntı:</b> kazanan semboller patlar, üsttekiler aşağı süzülür, yeni gelenler yeni kazanç getirebilir.</li>
+      <li><b>Hazine sandığı:</b> 4 / 5 / 6+ sandık = bahsin 3× / 5× / 100× katı + 10 bedava dönüş.</li>
+      <li><b>Sihirli kabarcık:</b> ana oyunda ara sıra (×2–×50) çıkar ve o dönüşün kazancını katlar. Bedava dönüşlerde (×2–×100) tüm kabarcıklar <b>toplam çarpana</b> eklenir ve kalan her kazancı katlar.</li>
+      <li><b>Yeniden tetikleme:</b> bedava dönüşte 3+ sandık = +5 dönüş.</li>
+      <li><b>Ante bahis:</b> bahis ×1,25, hazine sandığı gelme şansı yaklaşık iki katı. Açıkken bonus satın alınamaz.</li>
+      <li><b>Bonus satın al:</b> bahsin 100 katı. Maksimum kazanç bahsin 25.000 katı.</li>
+        </ul>
+
+        <p class="mt-2.5 text-[13px] text-[#4f7486] dark:text-[#9cc3d4]">Izgara, makara şeritleri, ödemeler ve çarpan oranları Lezzet Patlaması ile aynıdır (yaklaşık %95–97 geri ödeme). Sadece eğlence amaçlıdır.</p>
+      </template>
+
+      <template v-else>
+        <h2 class="mb-2 h-10 pr-12 font-['Baloo_2',sans-serif] text-[30px]/10 font-bold whitespace-nowrap text-[#e2553d]">Ayarlar</h2>
+        <div v-for="setting in settings" :key="setting.key" class="flex h-16 items-center justify-between gap-4 border-t border-dashed border-[#cde9f2] dark:border-[#17425c]">
+          <div class="min-w-0">
+            <p class="truncate text-base/6 font-extrabold">{{ setting.label }}</p>
+            <p class="truncate text-[13px]/5 text-[#4f7486] dark:text-[#9cc3d4]">{{ setting.hint }}</p>
+          </div>
+          <button class="relative h-8 w-16 flex-none rounded-full transition-colors" :class="state[setting.key] ? 'bg-[#16b3c9]' : 'bg-black/25'" role="switch" :aria-checked="state[setting.key]" :aria-label="setting.label" @click="toggle(setting.key)">
+            <span class="absolute top-1 left-1 size-6 rounded-full bg-white shadow-[0_2px_4px_rgba(0,0,0,.35)] transition-transform" :class="{ 'translate-x-8': state[setting.key] }"></span>
+          </button>
+        </div>
+        <div class="flex h-16 items-center justify-between gap-4 border-t border-dashed border-[#cde9f2] dark:border-[#17425c]">
+          <div class="min-w-0">
+            <p class="truncate text-base/6 font-extrabold">Bakiye</p>
+            <p class="truncate text-[13px]/5 text-[#4f7486] dark:text-[#9cc3d4]">Demo bakiyeyi 10.000,00 krediye döndürür.</p>
+          </div>
+          <button class="h-11 w-[96px] flex-none rounded-[22px] bg-[#e2553d] font-extrabold text-white shadow-[0_3px_0_#0b3a5c] disabled:cursor-not-allowed disabled:opacity-45" :disabled="state.busy" @click="resetBalance">Sıfırla</button>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <div v-if="dialog.open" class="fixed inset-0 z-20 grid place-items-center bg-[rgba(2,16,28,.65)] p-4" role="dialog" aria-modal="true" @keydown.esc="cancelDialog">
+    <div class="flex h-[400px] w-[min(440px,100%)] flex-col items-center justify-center overflow-hidden rounded-3xl border-4 border-[#ffcf4d] bg-[#f6fdff] p-[22px] text-center shadow-[0_20px_50px_rgba(0,0,0,.4)] dark:bg-[#0b2536]">
+      <svg v-if="dialog.icon" class="size-[88px] flex-none" viewBox="0 0 100 100" aria-hidden="true"><use href="#sym-1"/></svg>
+      <h2 class="mb-2 font-['Baloo_2',sans-serif] text-[30px]/[36px] font-bold text-balance text-[#e2553d]">{{ dialog.title }}</h2>
+      <p v-if="dialog.value" class="mb-2.5 h-12 font-['Baloo_2',sans-serif] text-[44px]/[48px] font-bold whitespace-nowrap text-[#16b3c9]">{{ dialog.value }}</p>
+      <p class="mb-2.5" v-html="dialog.text"></p>
+      <div ref="dialogButtons" class="mt-2 flex flex-wrap justify-center gap-2">
+        <button v-for="button in dialog.buttons" :key="button.value" class="h-11 min-w-[72px] rounded-[22px] px-[18px] font-extrabold whitespace-nowrap" :class="button.cancel ? 'bg-[#cde9f2] dark:bg-[#17425c]' : 'bg-[#e2553d] text-white shadow-[0_3px_0_#0b3a5c]'" @click="closeDialog(button.value)">{{ button.label }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+Vue.createApp({
+  directives: {
+    motion: {
+      mounted(el, { value }) {
+        if (value) el.motion = el.animate(...value);
+      },
+      updated(el, { value, oldValue }) {
+        if (value === oldValue) return;
+        el.motion?.cancel();
+        el.motion = value ? el.animate(...value) : null;
+      },
+    },
+  },
+
+  setup() {
+    const { reactive, ref, computed, watch, nextTick } = Vue;
+
+    const SCATTER = 1;
+    const CHILI = 12;
+    const FOODS = [3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+    const SYMBOLS = {
+      1:  { name: 'Hazine sandığı',    tint: '[--tint:#ffe27a]' },
+      3:  { name: 'İnci istiridyesi',  tint: '[--tint:#e2c8ff]' },
+      4:  { name: 'Ahtapot',           tint: '[--tint:#ff8fb0]' },
+      5:  { name: 'Balon balığı',      tint: '[--tint:#ffe08a]' },
+      6:  { name: 'Yengeç',            tint: '[--tint:#ff8a74]' },
+      7:  { name: 'Denizanası',        tint: '[--tint:#d9b3ff]' },
+      8:  { name: 'Denizyıldızı',      tint: '[--tint:#ffb36b]' },
+      9:  { name: 'Tropik balık',      tint: '[--tint:#7fd4ff]' },
+      10: { name: 'Deniz kabuğu',      tint: '[--tint:#ffc9c0]' },
+      11: { name: 'Mercan',            tint: '[--tint:#ff9db0]' },
+      12: { name: 'Sihirli kabarcık',  tint: '[--tint:#9ff3ff]' },
+    };
+
+    const REEL_STRIPS = {
+      base: [
+        [11, 9, 6, 5, 11, 9, 7, 9, 7, 8, 10, 10, 6, 11, 5, 8, 8, 6, 11, 10, 7, 7, 7, 11, 1, 10, 10, 11, 3, 8, 9, 11, 4, 11, 11, 9, 5, 9, 10, 10, 8, 10, 7, 4, 11, 10, 10, 10, 7, 5, 9, 10, 4, 8, 8, 7, 11, 11, 6, 7, 7, 4, 10, 10, 3, 10, 6, 9, 8, 10, 6],
+        [1, 8, 4, 6, 8, 9, 10, 10, 8, 11, 11, 7, 11, 9, 4, 4, 9, 8, 11, 6, 3, 5, 10, 8, 11, 11, 11, 6, 9, 9, 10, 10, 7, 11, 7, 6, 11, 5, 8, 1, 11, 11, 7, 7, 11, 11, 10, 9, 5, 9, 6, 3, 10],
+        [11, 4, 8, 8, 10, 6, 10, 11, 4, 5, 11, 3, 6, 9, 11, 5, 5, 9, 3, 3, 3, 11, 4, 7, 9, 8, 9, 8, 10, 7, 10, 6, 10, 11, 4, 5, 11, 10, 11, 7, 7, 7, 8, 7, 8, 7, 10, 7, 11, 8, 6, 1, 10, 6, 10, 3, 4, 9, 8, 3, 8],
+        [4, 7, 10, 11, 6, 6, 7, 11, 8, 10, 9, 6, 9, 5, 11, 11, 11, 6, 5, 9, 9, 5, 6, 11, 9, 3, 6, 3, 5, 10, 11, 1, 10, 10, 10, 4, 11, 8, 10, 10, 9, 8, 11, 7, 3, 10, 11, 4, 11, 10, 11, 11],
+        [9, 9, 4, 11, 8, 5, 9, 10, 11, 8, 4, 6, 6, 10, 11, 9, 8, 10, 7, 7, 7, 1, 6, 11, 11, 9, 8, 7, 9, 9, 7, 9, 3, 4, 8, 5, 10, 10, 9, 7, 9, 9, 9, 10, 7, 6, 11, 9, 8, 11, 5, 9, 10, 9, 8, 4, 6, 9, 11, 5, 11, 5, 3],
+        [8, 3, 9, 7, 9, 5, 10, 11, 10, 1, 10, 4, 6, 6, 9, 6, 7, 6, 7, 10, 7, 7, 5, 11, 11, 8, 10, 5, 11, 4, 4, 4, 9, 4, 9, 9, 6, 11, 9, 4, 11, 8, 10, 4, 11, 5, 8, 11, 8, 7, 6, 11, 4, 9, 8, 3, 4, 6, 9, 9, 10, 8, 9],
+      ],
+      free: [
+        [9, 9, 3, 7, 9, 11, 6, 8, 4, 6, 5, 12, 8, 10, 10, 11, 8, 10, 11, 11, 5, 10, 10, 10, 9, 10, 8, 11, 10, 10, 8, 3, 10, 4, 6, 1, 11, 11, 7, 4, 8, 9, 10, 7, 6, 11, 9, 5],
+        [3, 5, 6, 11, 11, 9, 1, 12, 7, 11, 5, 9, 9, 11, 7, 4, 10, 4, 5, 3, 10, 10, 9, 11, 6, 6, 10, 8, 11, 9, 8, 4, 9, 10, 7, 10, 8, 10, 8, 8, 9, 6, 11, 8, 12],
+        [5, 9, 1, 7, 7, 11, 8, 5, 11, 4, 10, 9, 3, 11, 8, 4, 6, 5, 6, 12, 10, 3, 10, 10, 7, 7, 7, 10, 7, 8, 10, 4, 7, 11, 6, 9, 11, 9, 6, 4, 7, 8, 8, 9, 8, 10, 3, 11, 6, 8, 4, 11, 8],
+        [10, 5, 11, 10, 11, 11, 5, 3, 11, 8, 8, 10, 1, 9, 10, 6, 9, 10, 10, 5, 5, 10, 10, 10, 12, 9, 9, 11, 3, 10, 11, 4, 7, 6, 8, 6, 9, 10, 11, 7, 3, 11, 7, 9, 6, 4, 4],
+        [10, 7, 8, 4, 9, 11, 9, 12, 9, 11, 11, 8, 10, 9, 9, 4, 8, 5, 10, 11, 6, 7, 7, 7, 10, 6, 3, 10, 9, 8, 9, 9, 11, 8, 10, 1, 7, 6, 5, 7, 11, 5, 6, 8, 7, 11, 3, 4],
+        [8, 10, 9, 9, 4, 7, 6, 10, 10, 9, 8, 5, 9, 6, 8, 3, 11, 10, 5, 9, 11, 4, 6, 11, 11, 8, 11, 7, 9, 1, 10, 8, 12],
+      ],
+    };
+
+    const PAYTABLE = {
+      3:  [10,   25,   50],
+      4:  [2.5,  10,   25],
+      5:  [2,    5,    15],
+      6:  [1.5,  2,    12],
+      7:  [1,    1.5,  10],
+      8:  [0.8,  1.2,  8],
+      9:  [0.5,  1,    5],
+      10: [0.4,  0.9,  4],
+      11: [0.25, 0.75, 2],
+    };
+
+    const SCATTER_PAY = { 4: 3, 5: 5, 6: 100 };
+
+    const BET_LEVELS = [0.01, 0.02, 0.03, 0.04, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.75, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      .map(coin => Math.round(coin * 2000) / 100);
+    const DEFAULT_BET_INDEX = BET_LEVELS.indexOf(2);
+
+    const BASE_MULTIPLIERS = [[2, 40], [3, 25], [4, 15], [5, 10], [10, 6], [25, 3], [50, 1]];
+    const FREE_SPIN_MULTIPLIERS = [
+      [2, 30], [3, 45], [4, 55], [5, 55], [6, 55], [8, 50], [10, 50],
+      [12, 42], [15, 38], [20, 32], [25, 28], [50, 16], [100, 8],
+    ];
+
+    const BASE_CHILI_CHANCE = 0.18;
+    const FREE_SPIN_CHILI_CHANCE = 0.25;
+    const ANTE_SCATTER_CHANCE = 0.22;
+
+    const REEL_COUNT = 6;
+    const ROWS = 5;
+    const MIN_CLUSTER = 8;
+    const SCATTERS_TO_TRIGGER = 4;
+    const SCATTERS_TO_RETRIGGER = 3;
+    const FREE_SPINS_AWARDED = 10;
+    const FREE_SPINS_RETRIGGER = 5;
+    const ANTE_FACTOR = 1.25;
+    const BONUS_BUY_COST_X = 100;
+    const BIG_WIN_X = 15;
+    const MAX_WIN_X = 25000;
+    const START_BALANCE = 10000;
+    const STORAGE_KEY = 'deniz-demo';
+
+    const ROW_TOP = ['top-0', 'top-[20%]', 'top-[40%]', 'top-[60%]', 'top-[80%]'];
+
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const motion = {
+      pulse: reducedMotion ? null : [
+        [
+          { transform: 'scale(1)', filter: 'drop-shadow(0 3px 0 rgba(0,0,0,.28))' },
+          { transform: 'scale(1.13)', filter: 'drop-shadow(0 0 10px #c9fbff)' },
+        ],
+        { duration: 420, easing: 'ease-in-out', iterations: Infinity, direction: 'alternate' },
+      ],
+      boom: [
+        [{ transform: 'none' }, { transform: 'scale(1.45) rotate(-8deg)', offset: 0.4 }, { transform: 'none' }],
+        { duration: 500, easing: 'ease-out' },
+      ],
+      rise: [
+        [
+          { transform: 'translateY(30px) scale(.6)', opacity: 0 },
+          { transform: 'none', opacity: 1, offset: 0.2 },
+          { opacity: 1, offset: 0.75 },
+          { transform: 'translateY(-50px)', opacity: 0 },
+        ],
+        { duration: 1100, easing: 'ease-out', fill: 'forwards' },
+      ],
+      wobble: reducedMotion ? null : [
+        [{ transform: 'none' }, { transform: 'scale(1.06) rotate(-2deg)' }],
+        { duration: 1000, easing: 'ease-in-out', iterations: Infinity, direction: 'alternate' },
+      ],
+    };
+
+    const money = new Intl.NumberFormat('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const fmt = value => money.format(value);
+    const round2 = value => Math.round(value * 100) / 100;
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+    const randomInt = n => crypto.getRandomValues(new Uint32Array(1))[0] % n;
+    const chance = p => randomInt(1000) < p * 1000;
+
+    function weightedPick(table) {
+      let roll = randomInt(table.reduce((sum, [, weight]) => sum + weight, 0));
+      for (const [value, weight] of table) {
+        roll -= weight;
+        if (roll < 0) return value;
+      }
+      return table[0][0];
+    }
+
+    const state = reactive({
+      balance: START_BALANCE,
+      betIndex: DEFAULT_BET_INDEX,
+      ante: false,
+      turbo: false,
+      sound: true,
+      busy: false,
+      autoSpinsLeft: 0,
+      inFreeSpins: false,
+      freeSpinsLeft: 0,
+      freeSpinsTotal: 0,
+      freeSpinsWin: 0,
+      totalMultiplier: 0,
+      roundWin: 0,
+      lastWin: 0,
+      message: 'Aynı deniz canlısından 8 veya daha fazlası, ekranın herhangi bir yerinde kazandırır.',
+    });
+
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      if ('bal' in saved) state.balance = saved.bal;
+      if ('bi' in saved) state.betIndex = saved.bi;
+      if ('ante' in saved) state.ante = saved.ante;
+      if ('turbo' in saved) state.turbo = saved.turbo;
+      if ('sound' in saved) state.sound = saved.sound;
+    } catch {}
+    if (!(state.betIndex >= 0 && state.betIndex < BET_LEVELS.length)) state.betIndex = DEFAULT_BET_INDEX;
+    if (!(state.balance >= 0)) state.balance = START_BALANCE;
+
+    watch(
+      () => [state.balance, state.betIndex, state.ante, state.turbo, state.sound],
+      ([bal, bi, ante, turbo, sound]) => {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({ bal, bi, ante, turbo, sound }));
+        } catch {}
+      }
+    );
+
+    const baseBet = computed(() => BET_LEVELS[state.betIndex]);
+    const spinCost = computed(() => round2(baseBet.value * (state.ante ? ANTE_FACTOR : 1)));
+    const buyCost = computed(() => round2(baseBet.value * BONUS_BUY_COST_X));
+    const anteBet = computed(() => round2(baseBet.value * ANTE_FACTOR));
+    const autoOn = computed(() => state.autoSpinsLeft > 0);
+    const scaleTime = ms => ms * (state.turbo ? 0.45 : 1) * (reducedMotion ? 0.6 : 1);
+
+    let audio = null;
+
+    function tone(freq, duration = 0.12, wave = 'sine', volume = 0.12, delay = 0) {
+      if (!state.sound) return;
+      try {
+        audio ||= new (window.AudioContext || window.webkitAudioContext)();
+        const start = audio.currentTime + delay;
+        const osc = audio.createOscillator();
+        const gain = audio.createGain();
+        osc.type = wave;
+        osc.frequency.setValueAtTime(freq, start);
+        gain.gain.setValueAtTime(volume, start);
+        gain.gain.exponentialRampToValueAtTime(0.001, start + duration);
+        osc.connect(gain).connect(audio.destination);
+        osc.start(start);
+        osc.stop(start + duration + 0.02);
+      } catch {}
+    }
+
+    const notes = (freqs, duration, wave, volume, gap) =>
+      freqs.forEach((freq, i) => tone(freq, duration, wave, volume, i * gap));
+
+    const sfx = {
+      click:   () => tone(520, 0.05, 'square', 0.04),
+      land:    reel => tone(150 + reel * 12, 0.09, 'triangle', 0.16),
+      win:     () => notes([523, 659, 784], 0.18, 'triangle', 0.1, 0.07),
+      pop:     () => tone(880, 0.07, 'sine', 0.08),
+      scatter: () => notes([784, 988, 1175, 1568], 0.3, 'sine', 0.1, 0.09),
+      chili:   () => { tone(180, 0.35, 'sawtooth', 0.07); tone(360, 0.25, 'square', 0.04, 0.05); },
+      bigWin:  () => notes([523, 659, 784, 1047, 784, 1047, 1319], 0.22, 'triangle', 0.11, 0.11),
+    };
+
+    const board = ref(null);
+    const grid = ref([]);
+    const floats = ref([]);
+    const positions = new Array(REEL_COUNT).fill(0);
+    let reelSet = 'base';
+    let uid = 0;
+
+    const reelEl = reel => board.value.children[reel];
+    const cellEl = (reel, row) => reelEl(reel).children[row];
+    const allCells = () => grid.value.flat();
+    const countSymbol = symbol => allCells().filter(cell => cell.symbol === symbol).length;
+
+    function makeCell(symbol) {
+      const table = state.inFreeSpins ? FREE_SPIN_MULTIPLIERS : BASE_MULTIPLIERS;
+      return { id: ++uid, symbol, multiplier: symbol === CHILI ? weightedPick(table) : 0, win: false, boom: false };
+    }
+
+    function nextFromStrip(reel) {
+      const strip = REEL_STRIPS[reelSet][reel];
+      positions[reel] = (positions[reel] - 1 + strip.length) % strip.length;
+      return strip[positions[reel]];
+    }
+
+    function placeScatter() {
+      for (;;) {
+        const reel = randomInt(REEL_COUNT);
+        const row = randomInt(ROWS);
+        if (grid.value[reel][row].symbol !== SCATTER) {
+          grid.value[reel][row] = makeCell(SCATTER);
+          return;
+        }
+      }
+    }
+
+    function fillGrid(forcedScatters = 0) {
+      grid.value = REEL_STRIPS[reelSet].map((strip, reel) => {
+        positions[reel] = randomInt(strip.length);
+        return Array.from({ length: ROWS }, (_, row) => makeCell(strip[(positions[reel] + row) % strip.length]));
+      });
+
+      if (forcedScatters) {
+        while (countSymbol(SCATTER) < forcedScatters) placeScatter();
+        return;
+      }
+      if (reelSet === 'base' && state.ante && chance(ANTE_SCATTER_CHANCE)) placeScatter();
+
+      const chiliChance = reelSet === 'free' ? FREE_SPIN_CHILI_CHANCE : BASE_CHILI_CHANCE;
+      grid.value.forEach(column => {
+        if (!chance(chiliChance)) return;
+        const row = randomInt(ROWS);
+        if (column[row].symbol !== SCATTER) column[row] = makeCell(CHILI);
+      });
+    }
+
+    function animateDrop(reel, drops, delay) {
+      [...reelEl(reel).children].forEach((el, row) => {
+        const rows = drops[row];
+        if (!rows) return;
+        el.animate(
+          [{ transform: `translateY(${rows * 100}%)` }, { transform: 'none' }],
+          { duration: scaleTime(240 + 35 * Math.abs(rows)), delay, easing: 'cubic-bezier(.3,1.25,.55,1)', fill: 'backwards' }
+        );
+      });
+    }
+
+    async function dropInNewBoard(forcedScatters) {
+      const lastReel = REEL_COUNT - 1;
+
+      for (let reel = 0; reel < REEL_COUNT; reel++) {
+        [...reelEl(reel).children].forEach(el => el.animate(
+          [{ transform: 'none' }, { transform: 'translateY(560%)' }],
+          { duration: scaleTime(240), delay: scaleTime(reel * 35), easing: 'cubic-bezier(.55,0,.9,.5)', fill: 'forwards' }
+        ));
+      }
+      await sleep(scaleTime(240 + lastReel * 35));
+
+      fillGrid(forcedScatters);
+      await nextTick();
+      for (let reel = 0; reel < REEL_COUNT; reel++) {
+        animateDrop(reel, new Array(ROWS).fill(-6), scaleTime(reel * 75));
+        setTimeout(() => sfx.land(reel), scaleTime(reel * 75 + 330));
+      }
+      await sleep(scaleTime(lastReel * 75 + 470));
+    }
+
+    function payout(symbol, count) {
+      const [pay8to9, pay10to11, pay12plus] = PAYTABLE[symbol];
+      if (count >= 12) return pay12plus;
+      if (count >= 10) return pay10to11;
+      return pay8to9;
+    }
+
+    function findWins() {
+      const spotsBySymbol = {};
+      grid.value.forEach((column, reel) => column.forEach((cell, row) => {
+        if (FOODS.includes(cell.symbol)) (spotsBySymbol[cell.symbol] ||= []).push([reel, row]);
+      }));
+
+      let total = 0;
+      const cells = [];
+      const wins = [];
+      for (const [symbol, spots] of Object.entries(spotsBySymbol)) {
+        if (spots.length < MIN_CLUSTER) continue;
+        const amount = round2(payout(symbol, spots.length) * baseBet.value);
+        total += amount;
+        cells.push(...spots);
+        wins.push({ symbol, count: spots.length, amount });
+      }
+      return { total: round2(total), cells, wins };
+    }
+
+    async function tumble(winningCells) {
+      const removed = Array.from({ length: REEL_COUNT }, () => new Set());
+      winningCells.forEach(([reel, row]) => removed[reel].add(row));
+
+      const drops = [];
+      for (let reel = 0; reel < REEL_COUNT; reel++) {
+        const count = removed[reel].size;
+        if (!count) continue;
+
+        const kept = [];
+        grid.value[reel].forEach((cell, row) => {
+          if (!removed[reel].has(row)) kept.push({ cell, from: row });
+        });
+
+        const incoming = new Array(count);
+        for (let i = count - 1; i >= 0; i--) {
+          incoming[i] = { cell: makeCell(nextFromStrip(reel)), from: i - count };
+        }
+
+        const column = [...incoming, ...kept];
+        grid.value[reel] = column.map(item => item.cell);
+        drops[reel] = column.map((item, row) => item.from - row);
+      }
+
+      await nextTick();
+      drops.forEach((rows, reel) => animateDrop(reel, rows, scaleTime(reel * 30)));
+    }
+
+    function floatText(text, big = false) {
+      const id = ++uid;
+      floats.value.push({ id, text, big });
+      setTimeout(() => { floats.value = floats.value.filter(item => item.id !== id); }, 1200);
+    }
+
+    const bigWin = reactive({ show: false, title: '', shown: 0, skipped: false });
+
+    function showBigWin(amount) {
+      return new Promise(resolve => {
+        const timesBet = amount / baseBet.value;
+        Object.assign(bigWin, {
+          show: true,
+          skipped: false,
+          shown: 0,
+          title: timesBet >= 100 ? 'Efsane kazanç!' : timesBet >= 40 ? 'Mega kazanç!' : 'Büyük kazanç!',
+        });
+        sfx.bigWin();
+
+        const duration = scaleTime(2200);
+        const startTime = performance.now();
+        const step = now => {
+          const progress = bigWin.skipped ? 1 : Math.min(1, (now - startTime) / duration);
+          bigWin.shown = amount * (1 - (1 - progress) ** 3);
+          if (progress < 1) {
+            requestAnimationFrame(step);
+            return;
+          }
+          setTimeout(() => {
+            bigWin.show = false;
+            resolve();
+          }, bigWin.skipped ? 120 : scaleTime(900));
+        };
+        requestAnimationFrame(step);
+      });
+    }
+
+    const dialog = reactive({ open: false, icon: false, title: '', value: '', text: '', buttons: [] });
+    const dialogButtons = ref(null);
+    let settleDialog = null;
+    let dialogTimer = 0;
+
+    function openDialog({ icon = false, title, value = '', text = '', buttons, autoCloseMs = 0 }) {
+      return new Promise(resolve => {
+        Object.assign(dialog, { open: true, icon, title, value, text, buttons });
+        settleDialog = resolve;
+        if (autoCloseMs) dialogTimer = setTimeout(() => closeDialog(buttons[0].value), autoCloseMs);
+        nextTick(() => dialogButtons.value?.querySelector('button')?.focus());
+      });
+    }
+
+    function closeDialog(value) {
+      if (!dialog.open) return;
+      clearTimeout(dialogTimer);
+      dialog.open = false;
+      settleDialog(value);
+    }
+
+    function cancelDialog() {
+      const last = dialog.buttons[dialog.buttons.length - 1];
+      if (last.cancel) closeDialog(last.value);
+    }
+
+    async function resolveTumbles() {
+      let win = 0;
+
+      for (;;) {
+        const result = findWins();
+        if (!result.total) break;
+
+        win = round2(win + result.total);
+        result.cells.forEach(([reel, row]) => { grid.value[reel][row].win = true; });
+        sfx.win();
+        state.message = result.wins.map(w => `${SYMBOLS[w.symbol].name} ×${w.count} = ${fmt(w.amount)}`).join(' · ');
+        state.lastWin = win;
+        floatText('+' + fmt(result.total));
+        await sleep(scaleTime(720));
+
+        result.cells.forEach(([reel, row]) => cellEl(reel, row).animate(
+          [{ transform: 'scale(1)' }, { transform: 'scale(1.25)', offset: 0.35 }, { transform: 'scale(0)', opacity: 0 }],
+          { duration: scaleTime(320), fill: 'forwards' }
+        ));
+        sfx.pop();
+        await sleep(scaleTime(330));
+
+        await tumble(result.cells);
+        await sleep(scaleTime(560));
+      }
+
+      return win;
+    }
+
+    async function applyChiliMultipliers(win) {
+      const chilis = allCells().filter(cell => cell.symbol === CHILI);
+      if (win <= 0 || !(chilis.length || (state.inFreeSpins && state.totalMultiplier > 0))) return win;
+
+      const added = chilis.reduce((sum, cell) => sum + cell.multiplier, 0);
+      for (const cell of chilis) {
+        cell.boom = true;
+        sfx.chili();
+        await sleep(scaleTime(240));
+      }
+
+      if (state.inFreeSpins) state.totalMultiplier += added;
+      const multiplier = state.inFreeSpins ? state.totalMultiplier : added;
+      const label = state.inFreeSpins ? 'Toplam çarpan' : 'Kabarcık çarpanı';
+
+      floatText('×' + multiplier, true);
+      state.message = `${label} ×${multiplier}: ${fmt(win)} → ${fmt(win * multiplier)}`;
+      await sleep(scaleTime(950));
+
+      win = round2(win * multiplier);
+      state.lastWin = win;
+      return win;
+    }
+
+    async function handleScatters(win, scatterCount) {
+      const needed = state.inFreeSpins ? SCATTERS_TO_RETRIGGER : SCATTERS_TO_TRIGGER;
+      if (scatterCount < needed) return win;
+
+      allCells().filter(cell => cell.symbol === SCATTER).forEach(cell => { cell.win = true; });
+      sfx.scatter();
+
+      if (!state.inFreeSpins) {
+        const scatterPay = round2(baseBet.value * SCATTER_PAY[Math.min(scatterCount, 6)]);
+        win = round2(win + scatterPay);
+        state.lastWin = win;
+        state.message = `${scatterCount} hazine sandığı! ${fmt(scatterPay)} + ${FREE_SPINS_AWARDED} bedava dönüş`;
+      }
+
+      await sleep(scaleTime(1300));
+      return win;
+    }
+
+    async function playSpin(forcedScatters = 0) {
+      reelSet = state.inFreeSpins ? 'free' : 'base';
+      state.message = state.inFreeSpins ? `Bedava dönüş · toplam çarpan ×${state.totalMultiplier}` : 'Dalışa geçiliyor…';
+
+      await dropInNewBoard(forcedScatters);
+
+      let win = await resolveTumbles();
+      win = await applyChiliMultipliers(win);
+
+      const scatterCount = countSymbol(SCATTER);
+      win = await handleScatters(win, scatterCount);
+      win = Math.max(0, Math.min(win, round2(baseBet.value * MAX_WIN_X - state.roundWin)));
+
+      if (win >= baseBet.value * BIG_WIN_X) await showBigWin(win);
+
+      state.balance = round2(state.balance + win);
+      state.roundWin = round2(state.roundWin + win);
+      if (state.inFreeSpins) state.freeSpinsWin = round2(state.freeSpinsWin + win);
+      if (!win && !state.inFreeSpins) state.message = 'Bu sefer olmadı — tekrar dene.';
+
+      return { win, scatterCount };
+    }
+
+    async function runFreeSpins() {
+      await openDialog({
+        icon: true,
+        title: `${FREE_SPINS_AWARDED} bedava dönüş!`,
+        text: 'Bedava dönüşlerde sihirli kabarcıklar daha sık ve daha büyük çıkar. Her kabarcık <b>toplam çarpana</b> eklenir ve kazanan her dönüşü katlar. 3+ sandık = +5 dönüş.',
+        buttons: [{ label: 'Başla', value: 'go' }],
+        autoCloseMs: autoOn.value ? 2200 : 0,
+      });
+
+      Object.assign(state, {
+        inFreeSpins: true,
+        freeSpinsLeft: FREE_SPINS_AWARDED,
+        freeSpinsTotal: FREE_SPINS_AWARDED,
+        freeSpinsWin: 0,
+        totalMultiplier: 0,
+      });
+
+      while (state.freeSpinsLeft > 0 && state.roundWin < baseBet.value * MAX_WIN_X) {
+        state.freeSpinsLeft--;
+        const { scatterCount } = await playSpin();
+
+        if (scatterCount >= SCATTERS_TO_RETRIGGER) {
+          state.freeSpinsLeft += FREE_SPINS_RETRIGGER;
+          state.freeSpinsTotal += FREE_SPINS_RETRIGGER;
+          floatText(`+${FREE_SPINS_RETRIGGER} dönüş`, true);
+          await sleep(scaleTime(1000));
+        }
+        await sleep(scaleTime(280));
+      }
+
+      state.inFreeSpins = false;
+
+      await openDialog({
+        title: 'Bedava dönüşler bitti',
+        value: fmt(state.freeSpinsWin),
+        text: `${state.freeSpinsTotal} dönüşte, son toplam çarpan ×${state.totalMultiplier}. Bu tur toplamı: <b>${fmt(state.roundWin)}</b> (${fmt(state.roundWin / baseBet.value)}× bahis).`,
+        buttons: [{ label: 'Devam', value: 'ok' }],
+        autoCloseMs: autoOn.value ? 2600 : 0,
+      });
+
+      state.lastWin = state.roundWin;
+      state.message = `Bonus turu: ${fmt(state.roundWin)} kazandın.`;
+    }
+
+    async function startRound(isBonusBuy) {
+      if (state.busy) return;
+
+      const price = isBonusBuy ? buyCost.value : spinCost.value;
+      if (state.balance + 1e-9 < price) {
+        state.message = 'Yetersiz bakiye. "Bakiyeyi sıfırla" ile 10.000 krediye dönebilirsin.';
+        state.autoSpinsLeft = 0;
+        return;
+      }
+
+      Object.assign(state, { busy: true, roundWin: 0, lastWin: 0, balance: round2(state.balance - price) });
+      sfx.click();
+
+      const { scatterCount } = await playSpin(isBonusBuy ? SCATTERS_TO_TRIGGER : 0);
+      if (scatterCount >= SCATTERS_TO_TRIGGER) await runFreeSpins();
+
+      if (state.roundWin >= baseBet.value * MAX_WIN_X - 0.005) state.message = 'Maksimum kazanç: bahsin 25.000 katı!';
+      state.busy = false;
+
+      if (autoOn.value) {
+        state.autoSpinsLeft--;
+        if (autoOn.value) setTimeout(() => startRound(false), scaleTime(380));
+      }
+    }
+
+    function spin() {
+      if (autoOn.value) {
+        state.autoSpinsLeft = 0;
+        state.message = 'Otomatik oyun durduruldu.';
+        return;
+      }
+      startRound(false);
+    }
+
+    function changeBet(step) {
+      const index = state.betIndex + step;
+      if (index < 0 || index >= BET_LEVELS.length) return;
+      state.betIndex = index;
+      sfx.click();
+    }
+
+    function toggleAnte() {
+      state.ante = !state.ante;
+      state.message = state.ante ? 'Ante açık: hazine sandığı şansı yaklaşık iki katı, bahis ×1,25.' : 'Ante kapalı.';
+    }
+
+    function toggle(key) {
+      state[key] = !state[key];
+      sfx.click();
+    }
+
+    const panel = ref(null);
+    const panelClose = ref(null);
+
+    function openPanel(name) {
+      panel.value = name;
+      nextTick(() => panelClose.value?.focus());
+    }
+
+    function closePanel() {
+      panel.value = null;
+    }
+
+    const settings = [
+      { key: 'sound', label: 'Ses', hint: 'Oyun efektleri' },
+      { key: 'turbo', label: 'Turbo dönüş', hint: 'Animasyonlar daha hızlı oynar' },
+    ];
+
+    async function resetBalance() {
+      closePanel();
+      const answer = await openDialog({
+        title: 'Bakiyeyi sıfırla?',
+        text: 'Demo bakiyen 10.000,00 krediye döner.',
+        buttons: [{ label: 'Sıfırla', value: 'yes' }, { label: 'Vazgeç', value: 'no', cancel: true }],
+      });
+      if (answer !== 'yes') return;
+      Object.assign(state, { balance: START_BALANCE, lastWin: 0, message: 'Bakiye 10.000,00 krediye sıfırlandı.' });
+    }
+
+    async function buyBonus() {
+      if (state.busy || state.ante) return;
+      const answer = await openDialog({
+        icon: true,
+        title: 'Bonus satın al',
+        text: `10 bedava dönüş, bedeli <b>${fmt(buyCost.value)}</b> (bahsin 100 katı).`,
+        buttons: [{ label: 'Satın al', value: 'yes' }, { label: 'Vazgeç', value: 'no', cancel: true }],
+      });
+      if (answer === 'yes') startRound(true);
+    }
+
+    async function chooseAutoplay() {
+      if (state.busy) return;
+      const answer = await openDialog({
+        title: 'Otomatik oyun',
+        text: 'Kaç dönüş oynansın? Döndür düğmesiyle istediğin an durdurabilirsin.',
+        buttons: [
+          { label: '10', value: '10' },
+          { label: '25', value: '25' },
+          { label: '50', value: '50' },
+          { label: '100', value: '100' },
+          { label: 'Vazgeç', value: '0', cancel: true },
+        ],
+      });
+      const spins = Number(answer);
+      if (spins > 0) {
+        state.autoSpinsLeft = spins;
+        startRound(false);
+      }
+    }
+
+    const paytable = computed(() => {
+      const amounts = list => list.map(x => fmt(x * baseBet.value));
+      return {
+        foods: FOODS.map(symbol => ({ symbol, name: SYMBOLS[symbol].name, amounts: amounts(PAYTABLE[symbol]) })),
+        scatter: amounts([SCATTER_PAY[4], SCATTER_PAY[5], SCATTER_PAY[6]]),
+      };
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.code !== 'Space' || dialog.open || panel.value) return;
+      if (/INPUT|TEXTAREA|BUTTON/.test(document.activeElement?.tagName || '')) return;
+      e.preventDefault();
+      if (autoOn.value) state.autoSpinsLeft = 0;
+      else startRound(false);
+    });
+
+    fillGrid();
+
+    return {
+      CHILI, SYMBOLS, ROW_TOP, BET_LEVELS, motion,
+      state, grid, floats, bigWin, dialog, board, dialogButtons,
+      baseBet, spinCost, buyCost, anteBet, autoOn, paytable, panel, panelClose, settings,
+      fmt, spin, changeBet, toggle, toggleAnte, buyBonus, chooseAutoplay, resetBalance,
+      openPanel, closePanel, closeDialog, cancelDialog,
+    };
+  },
+}).mount('#app');
+</script>
+</body>
+</html>

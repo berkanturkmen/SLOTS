@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="tr" class="[color-scheme:light_dark]">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Büyü Kazanı · Demo Slot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body class="min-h-screen overflow-x-clip font-[Manrope,system-ui,sans-serif] text-base/normal font-semibold text-[#ece6ff] [background:radial-gradient(circle,rgba(182,255,122,.5)_0_1px,transparent_1.5px)_0_0/53px_53px,radial-gradient(circle,rgba(201,160,255,.45)_0_1.2px,transparent_1.8px)_19px_31px/71px_71px,radial-gradient(ellipse_at_bottom,#2a1450,#0c0618_70%)]">
+
+<svg width="0" height="0" class="absolute" aria-hidden="true">
+  <defs>
+<radialGradient id="g-glow">
+      <stop offset="0" stop-color="#eaffd6" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#b6ff7a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g-orb" cx=".4" cy=".35">
+      <stop offset="0" stop-color="#f0e6ff"/>
+      <stop offset=".5" stop-color="#9b6bff"/>
+      <stop offset="1" stop-color="#3a1d8a"/>
+    </radialGradient>
+    <linearGradient id="g-flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3a0"/>
+      <stop offset=".6" stop-color="#ffb02e"/>
+      <stop offset="1" stop-color="#ff6a2e"/>
+    </linearGradient>
+    <symbol id="sym-3" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M58 8C52 26 46 44 30 68h40C64 48 60 30 58 8z" fill="#4b2fa8"/>
+      <ellipse cx="50" cy="70" rx="38" ry="10" fill="#3a2085"/>
+      <path d="M32 62q18 6 36 0l2 7q-20 6-40 0z" fill="#ffd36b"/>
+      <path d="M52.0 30.0L53.5 34.0L57.7 34.1L54.4 36.8L55.5 40.9L52.0 38.5L48.5 40.9L49.6 36.8L46.3 34.1L50.5 34.0Z" fill="#ffd36b"/>
+      <path d="M58.0 45.5L59.2 48.4L62.3 48.6L59.9 50.6L60.6 53.6L58.0 52.0L55.4 53.6L56.1 50.6L53.7 48.6L56.8 48.4Z" fill="#ffd36b"/>
+      <path d="M45.0 48.5L45.9 50.8L48.3 50.9L46.4 52.5L47.1 54.8L45.0 53.5L42.9 54.8L43.6 52.5L41.7 50.9L44.1 50.8Z" fill="#ffd36b"/>
+    </symbol>
+    <symbol id="sym-4" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M22 18h50a6 6 0 0 1 6 6v60H28a6 6 0 0 1-6-6z" fill="#8a2b3c" stroke="#5a1424" stroke-width="2"/>
+      <path d="M28 84h50v-6H28a3 3 0 0 0 0 6z" fill="#f3e2b3"/>
+      <rect x="22" y="18" width="8" height="60" fill="#6e1f2e"/>
+      <path d="M72 18h6v6zM72 78h6v-6z" fill="#ffd36b"/>
+      <circle cx="53" cy="48" r="14" fill="none" stroke="#ffd36b" stroke-width="3"/>
+      <path d="M53.0 38.0L55.4 44.8L62.5 44.9L56.8 49.2L58.9 56.1L53.0 52.0L47.1 56.1L49.2 49.2L43.5 44.9L50.6 44.8Z" fill="#ffd36b"/>
+      <rect x="74" y="43" width="9" height="10" rx="2" fill="#ffd36b"/>
+    </symbol>
+    <symbol id="sym-5" viewBox="0 0 100 100">
+<rect x="26" y="80" width="48" height="8" rx="3" fill="#5a3418"/>
+      <path d="M32 80h36l-6-12H38z" fill="#7a4a24"/>
+      <circle cx="50" cy="42" r="28" fill="url(#g-orb)"/>
+      <path d="M36 48q8-14 20-6t10 10" stroke="#e7d4ff" stroke-width="3" fill="none" opacity=".7" stroke-linecap="round"/>
+      <ellipse cx="40" cy="30" rx="7" ry="4" fill="#fff" opacity=".75" transform="rotate(-30 40 30)"/>
+    </symbol>
+    <symbol id="sym-6" viewBox="0 0 100 100">
+<path d="M22 84L62 40" stroke="#3a2418" stroke-width="7" stroke-linecap="round"/>
+      <path d="M22 84L30 75" stroke="#ffd36b" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="68" cy="32" r="20" fill="url(#g-glow)"/>
+      <path d="M68.0 14.0L72.4 25.9L85.1 26.4L75.1 34.3L78.6 46.6L68.0 39.5L57.4 46.6L60.9 34.3L50.9 26.4L63.6 25.9Z" fill="#ffd36b" stroke="#e0a020" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M30.0 25.0L31.2 28.4L34.8 28.5L31.9 30.6L32.9 34.0L30.0 32.0L27.1 34.0L28.1 30.6L25.2 28.5L28.8 28.4Z" fill="#b6ff7a"/>
+      <path d="M84.0 60.0L84.9 62.7L87.8 62.8L85.5 64.5L86.4 67.2L84.0 65.6L81.6 67.2L82.5 64.5L80.2 62.8L83.1 62.7Z" fill="#b6ff7a"/>
+    </symbol>
+    <symbol id="sym-7" viewBox="0 0 100 100">
+<ellipse cx="50" cy="86" rx="26" ry="6" fill="#8a7a6a"/>
+      <circle cx="50" cy="24" r="18" fill="url(#g-glow)"/>
+      <rect x="38" y="40" width="24" height="46" rx="3" fill="#f3ead6"/>
+      <path d="M38 43h24v6c-2 4-4 4-5 0-1 7-4 7-5 0-2 9-5 9-6 0-1 4-3 4-4 0z" fill="#fffaf0"/>
+      <path d="M50 40v-6" stroke="#333" stroke-width="2"/>
+      <path d="M50 10c8 10 10 16 6 22-3 4-9 4-12 0-4-6-2-12 6-22z" fill="url(#g-flame)"/>
+    </symbol>
+    <symbol id="sym-8" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M44 16h12v16c12 4 20 14 20 28 0 16-12 28-26 28S24 76 24 60c0-14 8-24 20-28z" fill="#e7f3ff" opacity=".25"/>
+      <path d="M27 58h46c0 15-10 27-23 27S27 73 27 58z" fill="#ff4d6d"/>
+      <path d="M44 16h12v16c12 4 20 14 20 28 0 16-12 28-26 28S24 76 24 60c0-14 8-24 20-28z" fill="none" stroke="#dfeaf5" stroke-width="2.5"/>
+      <rect x="42" y="8" width="16" height="10" rx="2" fill="#a0703c"/>
+      <circle cx="42" cy="68" r="3" fill="#fff" opacity=".6"/><circle cx="56" cy="74" r="2" fill="#fff" opacity=".6"/>
+      <path d="M32 50c2-6 6-10 11-12" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+    </symbol>
+    <symbol id="sym-9" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M33 50h34v30a6 6 0 0 1-6 6H39a6 6 0 0 1-6-6z" fill="#3ddc84"/>
+      <path d="M44 14h12v12c8 2 12 8 12 14v40a6 6 0 0 1-6 6H38a6 6 0 0 1-6-6V40c0-6 4-12 12-14z" fill="none" stroke="#dfeaf5" stroke-width="2.5"/>
+      <rect x="42" y="6" width="16" height="10" rx="2" fill="#a0703c"/>
+      <path d="M38 46v24" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+      <circle cx="52" cy="66" r="3" fill="#fff" opacity=".6"/>
+    </symbol>
+    <symbol id="sym-10" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M32 60h36l10 20a6 6 0 0 1-5 8H27a6 6 0 0 1-5-8z" fill="#3fb5ff"/>
+      <path d="M42 14h16v24l20 42a6 6 0 0 1-5 8H27a6 6 0 0 1-5-8l20-42z" fill="none" stroke="#dfeaf5" stroke-width="2.5" stroke-linejoin="round"/>
+      <rect x="40" y="6" width="20" height="10" rx="2" fill="#a0703c"/>
+      <circle cx="44" cy="74" r="3" fill="#fff" opacity=".6"/><circle cx="58" cy="78" r="2" fill="#fff" opacity=".6"/>
+    </symbol>
+    <symbol id="sym-11" viewBox="0 0 100 100">
+<ellipse cx="50" cy="89" rx="32" ry="5" fill="#000" opacity=".16"/>
+      <path d="M40 52h20l4 32a4 4 0 0 1-4 4H40a4 4 0 0 1-4-4z" fill="#f3ead6"/>
+      <path d="M12 54C12 28 30 14 50 14s38 14 38 40c0 4-4 6-8 6H20c-4 0-8-2-8-6z" fill="#e23b4e"/>
+      <g fill="#fff"><circle cx="34" cy="34" r="6"/><circle cx="58" cy="28" r="5"/><circle cx="72" cy="44" r="5"/><circle cx="46" cy="48" r="4"/><circle cx="24" cy="50" r="3.5"/></g>
+      <path d="M22 38c4-10 12-16 22-18" stroke="#ff8a96" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="sym-1" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="48" fill="url(#g-glow)"/>
+      <path d="M28 76l-6 11M72 76l6 11" stroke="#2a2438" stroke-width="6" stroke-linecap="round"/>
+      <path d="M14 42c0 26 15 42 36 42s36-16 36-42z" fill="#2a2438"/>
+      <ellipse cx="50" cy="42" rx="34" ry="8" fill="#5cff9a"/>
+      <ellipse cx="50" cy="42" rx="36" ry="9" fill="none" stroke="#4a4160" stroke-width="5"/>
+      <g fill="#8dffb8"><circle cx="40" cy="30" r="5"/><circle cx="56" cy="22" r="7"/><circle cx="64" cy="34" r="4"/><circle cx="46" cy="14" r="3"/></g>
+      <rect x="21" y="58" width="58" height="15" rx="7" fill="#9b5cff"/>
+      <text x="50" y="69.5" font-family="Metamorphous,serif" font-size="11" fill="#fff" text-anchor="middle" letter-spacing=".5">BONUS</text>
+    </symbol>
+    <symbol id="sym-12" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="46" fill="url(#g-glow)"/>
+      <path d="M30 18h40a8 8 0 0 1 8 8l-4 48a8 8 0 0 1-8 7H34a8 8 0 0 1-8-7l-4-48a8 8 0 0 1 8-8z" fill="#5e5a6e" stroke="#3d3a4a" stroke-width="2"/>
+      <path d="M50 28v42M50 40l12-10M50 52l-12-10" stroke="#b6ff7a" stroke-width="10" stroke-linecap="round" fill="none" opacity=".3"/>
+      <path d="M50 28v42M50 40l12-10M50 52l-12-10" stroke="#e4ffc8" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+      <path d="M32 26c2-3 5-4 8-4" stroke="#8a869c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div id="app" v-cloak class="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-4 px-[max(3vw,12px)] pt-[clamp(14px,3vw,32px)] pb-6 min-[1000px]:grid-cols-[190px_minmax(0,680px)_190px] min-[1000px]:justify-center min-[1000px]:gap-6 [&[v-cloak]]:invisible [&_button]:cursor-pointer [&_button:focus-visible]:outline-3 [&_button:focus-visible]:outline-offset-2 [&_button:focus-visible]:outline-[#b6ff7a]">
+
+  <header class="col-span-full grid h-[clamp(84px,13vw,104px)] w-[min(560px,100%)] place-content-center justify-self-center overflow-hidden rounded-[22px] border-4 border-[#f3ecff] bg-[#b6ff7a] px-4 text-center text-[#2a0f4a] shadow-[0_6px_0_#6fb83a,0_14px_30px_rgba(0,0,0,.25)]">
+    <h1 class="font-[Metamorphous,serif] text-[clamp(22px,6.5vw,44px)]/[1.15] font-normal whitespace-nowrap [text-shadow:0_3px_0_#f3ecff]">Büyü Kazanı</h1>
+    <p class="h-5 text-sm/5 font-extrabold whitespace-nowrap">Demo slot · sanal kredi, gerçek para yok</p>
+  </header>
+
+  <aside class="order-3 grid grid-cols-2 gap-3 min-[1000px]:order-none min-[1000px]:grid-cols-1 min-[1000px]:gap-5">
+    <button class="grid h-[184px] grid-rows-[60px_48px_30px] content-center justify-items-center gap-1.5 overflow-hidden rounded-[22px] border-4 border-[#b6ff7a] bg-linear-to-b from-[#5b2a86] to-[#2c0f4f] px-2 text-center text-white shadow-[0_6px_0_#1a0730,0_14px_30px_rgba(0,0,0,.3)] transition-transform active:translate-y-[3px] disabled:cursor-not-allowed disabled:opacity-45" :disabled="state.busy || state.ante" :title="state.ante ? 'Bonus şansı ×2 açıkken kullanılamaz' : undefined" @click="buyBonus">
+      <svg class="size-[60px]" viewBox="0 0 100 100" aria-hidden="true"><use href="#sym-1"/></svg>
+      <span class="font-[Metamorphous,serif] text-[18px]/[24px] font-normal whitespace-nowrap max-[1000px]:text-base/[24px]">BONUS<br>SATIN AL</span>
+      <span class="font-[Metamorphous,serif] text-[22px]/[30px] font-normal whitespace-nowrap text-[#b6ff7a]">{{ fmt(buyCost) }}</span>
+    </button>
+
+    <div class="grid h-[184px] grid-rows-[48px_22px_40px_20px] content-center justify-items-center gap-1.5 overflow-hidden rounded-[22px] border-4 border-[#b6ff7a] bg-linear-to-b from-[#5b2a86] to-[#2c0f4f] px-2 text-center text-white shadow-[0_6px_0_#1a0730,0_14px_30px_rgba(0,0,0,.3)]">
+      <p class="font-[Metamorphous,serif] text-[18px]/[24px] font-normal whitespace-nowrap max-[1000px]:text-base/[24px]">BONUS ŞANSI<br>×2</p>
+      <p class="text-[13px]/[22px] whitespace-nowrap opacity-85">Bahis <b class="text-[#b6ff7a]">{{ fmt(anteBet) }}</b></p>
+      <button class="relative h-8 w-16 self-center rounded-full transition-colors disabled:cursor-not-allowed disabled:opacity-45" :class="state.ante ? 'bg-[#b6ff7a]' : 'bg-black/35'" role="switch" :aria-checked="state.ante" aria-label="Bonus şansı ×2" :disabled="state.busy" @click="toggleAnte">
+        <span class="absolute top-1 left-1 size-6 rounded-full bg-[#f3ecff] shadow-[0_2px_4px_rgba(0,0,0,.35)] transition-transform" :class="{ 'translate-x-8': state.ante }"></span>
+      </button>
+      <p class="text-xs/5 font-extrabold opacity-85">{{ state.ante ? 'AÇIK' : 'KAPALI' }}</p>
+    </div>
+  </aside>
+
+  <main class="order-1 w-full rounded-[30px] border-4 border-[#b6ff7a] bg-linear-to-b p-[clamp(10px,2vw,18px)] min-[1000px]:order-none" :class="state.inFreeSpins ? 'from-[#1c8a6b] to-[#0a3f35] shadow-[0_8px_0_#062a23,0_24px_50px_rgba(0,0,0,.35)]' : 'from-[#5b2a86] to-[#2c0f4f] shadow-[0_8px_0_#1a0730,0_24px_50px_rgba(0,0,0,.35)]'">
+
+    <div v-if="state.inFreeSpins" class="mb-2.5 grid h-[52px] grid-cols-3 items-center overflow-hidden rounded-[14px] bg-black/25 text-center text-white">
+      <p><span class="block text-[11px]/[14px] font-extrabold whitespace-nowrap opacity-85">Bedava dönüş</span><b class="block font-[Metamorphous,serif] text-[20px]/[24px] font-normal whitespace-nowrap text-[#b6ff7a]">{{ state.freeSpinsLeft }}</b></p>
+      <p><span class="block text-[11px]/[14px] font-extrabold whitespace-nowrap opacity-85">Toplam çarpan</span><b class="block font-[Metamorphous,serif] text-[20px]/[24px] font-normal whitespace-nowrap text-[#b6ff7a]">×{{ state.totalMultiplier }}</b></p>
+      <p><span class="block text-[11px]/[14px] font-extrabold whitespace-nowrap opacity-85">Bonus kazancı</span><b class="block font-[Metamorphous,serif] text-[20px]/[24px] font-normal whitespace-nowrap text-[#b6ff7a]">{{ fmt(state.freeSpinsWin) }}</b></p>
+    </div>
+
+    <div ref="board" class="relative grid aspect-[6/5] grid-cols-6 gap-[clamp(3px,.8vw,7px)] rounded-[20px] p-[clamp(5px,1vw,9px)] shadow-[inset_0_5px_16px_rgba(0,0,0,.55)]" :class="state.inFreeSpins ? 'bg-[#04211b]' : 'bg-[#170827]'" aria-label="6 makara, 5 sıra oyun alanı">
+      <div v-for="(column, reel) in grid" :key="reel" class="relative overflow-hidden rounded-xl bg-linear-to-b from-white/7 to-white/2">
+        <div v-for="(cell, row) in column" :key="cell.id" class="absolute inset-x-0 grid h-1/5 place-items-center" :class="[ROW_TOP[row], SYMBOLS[cell.symbol].tint]">
+          <div class="absolute inset-[3%] bg-[radial-gradient(closest-side,var(--tint),transparent)]" :class="cell.win ? 'opacity-90' : 'opacity-45'"></div>
+          <svg v-motion="cell.win ? motion.pulse : cell.boom ? motion.boom : null" class="relative size-[72%] overflow-visible drop-shadow-[0_3px_0_rgba(0,0,0,.28)]" viewBox="0 0 100 100" aria-hidden="true"><use :href="'#sym-' + cell.symbol"/></svg>
+          <b v-if="cell.symbol === CHILI" v-motion="cell.boom ? motion.boom : null" class="absolute inset-x-0 bottom-[4%] text-center font-[Metamorphous,serif] text-[clamp(13px,2.6vw,24px)]/none font-normal text-white [text-shadow:0_2px_0_#2a0f4a,0_0_2px_#2a0f4a,0_0_8px_#b6ff7a]">×{{ cell.multiplier }}</b>
+        </div>
+      </div>
+
+      <div class="pointer-events-none absolute inset-0 grid place-items-center overflow-hidden rounded-[20px]">
+        <span v-for="item in floats" :key="item.id" v-motion="motion.rise" class="col-start-1 row-start-1 whitespace-nowrap font-[Metamorphous,serif] font-normal text-[#b6ff7a] opacity-0 [text-shadow:0_4px_0_#2a0f4a,0_0_18px_rgba(0,0,0,.5)]" :class="item.big ? 'text-[clamp(40px,9vw,80px)]/none' : 'text-[clamp(28px,6vw,54px)]/none'">{{ item.text }}</span>
+      </div>
+
+      <div v-if="bigWin.show" class="absolute inset-0 z-3 grid cursor-pointer place-content-center rounded-[20px] bg-[radial-gradient(circle,rgba(40,10,70,.6),rgba(8,2,18,.9))] text-center text-white" @click="bigWin.skipped = true">
+        <h3 v-motion="motion.wobble" class="font-[Metamorphous,serif] text-[clamp(34px,7vw,64px)]/[1.05] font-normal whitespace-nowrap text-[#b6ff7a] [text-shadow:0_5px_0_#2a0f4a]">{{ bigWin.title }}</h3>
+        <p class="mt-1.5 font-[Metamorphous,serif] text-[clamp(30px,6vw,56px)]/none font-normal">{{ fmt(bigWin.shown) }}</p>
+        <small class="text-[13px] opacity-75">Geçmek için dokun</small>
+      </div>
+    </div>
+  </main>
+
+  <div class="order-2 flex items-center justify-center gap-1.5 min-[400px]:gap-3 min-[1000px]:order-none min-[1000px]:flex-col min-[1000px]:gap-4">
+    <button class="order-5 grid h-11 w-[132px] flex-none place-items-center rounded-[22px] bg-[#f3ecff] text-[15px] font-extrabold whitespace-nowrap text-[#2a0f4a] shadow-[0_3px_0_#9b86c9] aria-pressed:bg-[#b6ff7a] aria-pressed:text-[#1c3300] max-[1000px]:order-1 max-[1000px]:h-10 max-[1000px]:w-[76px] max-[1000px]:text-xs" :aria-pressed="state.turbo" @click="toggle('turbo')">TURBO</button>
+
+    <button class="order-2 grid size-12 flex-none place-items-center rounded-full bg-[#f3ecff] text-[#2a0f4a] shadow-[0_3px_0_#9b86c9] disabled:cursor-not-allowed disabled:opacity-45 max-[1000px]:order-4 max-[1000px]:size-10" :disabled="state.busy || state.betIndex === BET_LEVELS.length - 1" aria-label="Bahsi artır" @click="changeBet(1)">
+      <svg class="size-5" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M3 10h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="relative order-3 grid size-[112px] flex-none place-items-center rounded-full border-5 border-[#f3ecff] bg-[radial-gradient(circle_at_40%_30%,#e9ffd0,#b6ff7a_55%,#7fd13a)] shadow-[0_6px_0_#3d7a14,0_12px_24px_rgba(0,0,0,.35)] transition-transform duration-100 active:translate-y-[3px] active:shadow-[0_3px_0_#3d7a14] disabled:cursor-default disabled:brightness-90 disabled:saturate-[.4] max-[1000px]:size-[76px]" :disabled="state.busy && !autoOn" :aria-label="autoOn ? 'Otomatik oyunu durdur' : 'Çevir (boşluk tuşu)'" @click="spin">
+      <svg v-if="autoOn" class="size-[56%]" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="13" y="13" width="22" height="22" rx="4" fill="#2a0f4a"/>
+      </svg>
+      <svg v-else class="size-[56%]" :class="{ 'animate-spin motion-reduce:animate-none': state.busy }" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M38 20A15 15 0 1 0 39 30" stroke="#2a0f4a" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M42 10v13H29z" fill="#2a0f4a"/>
+      </svg>
+      <i v-if="autoOn" class="absolute -right-1.5 -bottom-1.5 h-[22px] min-w-7 rounded-xl bg-[#2a0f4a] px-1.5 font-[Metamorphous,serif] text-sm/[22px] font-normal text-white not-italic">{{ state.autoSpinsLeft }}</i>
+    </button>
+
+    <button class="order-4 grid size-12 flex-none place-items-center rounded-full bg-[#f3ecff] text-[#2a0f4a] shadow-[0_3px_0_#9b86c9] disabled:cursor-not-allowed disabled:opacity-45 max-[1000px]:order-2 max-[1000px]:size-10" :disabled="state.busy || state.betIndex === 0" aria-label="Bahsi azalt" @click="changeBet(-1)">
+      <svg class="size-5" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="order-1 grid h-11 w-[132px] flex-none place-items-center rounded-[22px] bg-[#f3ecff] text-[15px] font-extrabold whitespace-nowrap text-[#2a0f4a] shadow-[0_3px_0_#9b86c9] disabled:cursor-not-allowed disabled:opacity-45 max-[1000px]:order-5 max-[1000px]:h-10 max-[1000px]:w-[76px] max-[1000px]:text-xs" :disabled="state.busy" @click="chooseAutoplay">OTOMATİK</button>
+  </div>
+
+  <footer class="order-4 col-span-full grid h-[76px] grid-cols-[136px_312px_minmax(0,1fr)] items-center gap-4 overflow-hidden rounded-[22px] border-4 border-[#b6ff7a] bg-[#170827] px-4 text-white shadow-[0_6px_0_#1a0730,0_14px_30px_rgba(0,0,0,.3)] min-[1000px]:order-none max-[1000px]:h-[164px] max-[1000px]:grid-cols-1 max-[1000px]:grid-rows-[40px_28px_48px] max-[1000px]:content-center max-[1000px]:justify-items-center max-[1000px]:gap-2">
+    <div class="flex h-10 gap-2">
+      <button class="grid size-10 place-items-center rounded-full bg-white/12 hover:bg-white/20" aria-label="Ayarlar" @click="openPanel('settings')">
+        <svg class="size-6" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </button>
+      <button class="grid size-10 place-items-center rounded-full bg-white/12 hover:bg-white/20" aria-label="Ödemeler ve kurallar" @click="openPanel('info')">
+        <svg class="size-6" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 11v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="7.5" r="1.4" fill="currentColor"/></svg>
+      </button>
+      <button class="grid size-10 place-items-center rounded-full bg-white/12 hover:bg-white/20" :aria-label="state.sound ? 'Sesi kapat' : 'Sesi aç'" @click="toggle('sound')">
+        <svg class="size-6" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor"/>
+          <path v-if="state.sound" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path v-else d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="grid h-7 grid-cols-[176px_128px] items-center gap-2 font-extrabold">
+      <p class="overflow-hidden text-sm/7 whitespace-nowrap"><span class="opacity-85">KREDİ</span> <b class="ml-1 font-[Metamorphous,serif] text-lg/7 font-normal text-[#b6ff7a]">{{ fmt(state.balance) }}</b></p>
+      <p class="overflow-hidden text-sm/7 whitespace-nowrap"><span class="opacity-85">BAHİS</span> <b class="ml-1 font-[Metamorphous,serif] text-lg/7 font-normal text-[#b6ff7a]">{{ fmt(spinCost) }}</b></p>
+    </div>
+
+    <div class="grid h-12 w-full content-center overflow-hidden text-center" aria-live="polite">
+      <p v-if="state.lastWin > 0" class="h-[26px] font-[Metamorphous,serif] text-[22px]/[26px] font-normal whitespace-nowrap text-[#b6ff7a]">KAZANÇ {{ fmt(state.lastWin) }}</p>
+      <p class="text-sm/[18px] font-extrabold" :class="state.lastWin > 0 ? 'line-clamp-1' : 'line-clamp-2'">{{ state.message }}</p>
+    </div>
+  </footer>
+
+  <div v-if="panel" class="fixed inset-0 z-10 grid place-items-center bg-[rgba(8,2,18,.72)] p-4" role="dialog" aria-modal="true" @click.self="closePanel" @keydown.esc="closePanel">
+    <div class="relative w-[min(560px,100%)] overflow-y-auto rounded-3xl border-4 border-[#b6ff7a] bg-[#1a1030] p-[22px] shadow-[0_20px_50px_rgba(0,0,0,.4)] dark:bg-[#1a1030]" :class="panel === 'info' ? 'h-[min(640px,88vh)]' : 'h-[300px]'">
+      <button ref="panelClose" class="absolute top-3 right-3 grid size-10 place-items-center rounded-full bg-[#3a2a5a] dark:bg-[#3a2a5a]" aria-label="Kapat" @click="closePanel">
+        <svg class="size-4" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+      </button>
+
+      <template v-if="panel === 'info'">
+        <h2 class="h-10 pr-12 font-[Metamorphous,serif] text-[30px]/10 font-normal whitespace-nowrap text-[#9b5cff]">Ödeme tablosu</h2>
+        <p class="mb-2.5 h-5 text-sm/5 whitespace-nowrap text-[#a99cc8] dark:text-[#a99cc8]">Tutarlar seçili bahse göre (taban bahis {{ fmt(baseBet) }}).</p>
+
+        <table class="w-full table-fixed border-collapse text-sm">
+          <thead class="text-[13px] text-[#a99cc8] dark:text-[#a99cc8]">
+            <tr class="h-7">
+              <th class="w-[50px]"></th>
+              <th class="px-0.5 text-left font-extrabold">Sembol</th>
+              <th v-for="label in ['8–9', '10–11', '12+']" :key="label" class="w-[70px] px-0.5 text-right font-extrabold">{{ label }}</th>
+            </tr>
+          </thead>
+          <tbody class="[&_td]:border-t [&_td]:border-dashed [&_td]:border-[#3a2a5a] [&_td]:px-0.5 [&_td]:align-middle dark:[&_td]:border-[#3a2a5a] [&>tr]:h-12">
+            <tr v-for="item in paytable.foods" :key="item.symbol">
+              <td><svg class="size-10" viewBox="0 0 100 100" aria-hidden="true"><use :href="'#sym-' + item.symbol"/></svg></td>
+              <td class="truncate font-extrabold">{{ item.name }}</td>
+              <td v-for="(amount, i) in item.amounts" :key="i" class="text-right whitespace-nowrap tabular-nums">{{ amount }}</td>
+            </tr>
+            <tr>
+              <td><svg class="size-10" viewBox="0 0 100 100" aria-hidden="true"><use href="#sym-1"/></svg></td>
+              <td class="text-[13px]/4 font-extrabold whitespace-nowrap">Büyü kazanı<br><small>4 / 5 / 6+</small></td>
+              <td v-for="(amount, i) in paytable.scatter" :key="i" class="text-right whitespace-nowrap tabular-nums">{{ amount }}</td>
+            </tr>
+            <tr>
+              <td><svg class="size-10" viewBox="0 0 100 100" aria-hidden="true"><use href="#sym-12"/></svg></td>
+              <td colspan="4" class="truncate font-extrabold">Rün taşı: kazancı ×2 – ×100 katlar</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul class="mt-3 list-disc pl-[18px] text-sm/[1.45] [&>li]:mb-1.5">
+      <li><b>Her yerde öder:</b> çizgi yok; aynı sembolden 8+ tane kazandırır.</li>
+      <li><b>Kaynama:</b> kazanan semboller buhar olup uçar, üsttekiler aşağı iner, yeni gelenler yeni kazanç getirebilir.</li>
+      <li><b>Büyü kazanı:</b> 4 / 5 / 6+ kazan = bahsin 3× / 5× / 100× katı + 10 bedava dönüş.</li>
+      <li><b>Rün taşı:</b> ana oyunda ara sıra (×2–×50) parlar ve o dönüşün kazancını katlar. Bedava dönüşlerde (×2–×100) tüm rünler <b>toplam çarpana</b> eklenir ve kalan her kazancı katlar.</li>
+      <li><b>Yeniden tetikleme:</b> bedava dönüşte 3+ kazan = +5 dönüş.</li>
+      <li><b>Ante bahis:</b> bahis ×1,25, büyü kazanı gelme şansı yaklaşık iki katı. Açıkken bonus satın alınamaz.</li>
+      <li><b>Bonus satın al:</b> bahsin 100 katı. Maksimum kazanç bahsin 25.000 katı.</li>
+        </ul>
+
+        <p class="mt-2.5 text-[13px] text-[#a99cc8] dark:text-[#a99cc8]">Izgara, makara şeritleri, ödemeler ve çarpan oranları Lezzet Patlaması ile aynıdır (yaklaşık %95–97 geri ödeme). Sadece eğlence amaçlıdır.</p>
+      </template>
+
+      <template v-else>
+        <h2 class="mb-2 h-10 pr-12 font-[Metamorphous,serif] text-[30px]/10 font-normal whitespace-nowrap text-[#9b5cff]">Ayarlar</h2>
+        <div v-for="setting in settings" :key="setting.key" class="flex h-16 items-center justify-between gap-4 border-t border-dashed border-[#3a2a5a] dark:border-[#3a2a5a]">
+          <div class="min-w-0">
+            <p class="truncate text-base/6 font-extrabold">{{ setting.label }}</p>
+            <p class="truncate text-[13px]/5 text-[#a99cc8] dark:text-[#a99cc8]">{{ setting.hint }}</p>
+          </div>
+          <button class="relative h-8 w-16 flex-none rounded-full transition-colors" :class="state[setting.key] ? 'bg-[#b6ff7a]' : 'bg-black/25'" role="switch" :aria-checked="state[setting.key]" :aria-label="setting.label" @click="toggle(setting.key)">
+            <span class="absolute top-1 left-1 size-6 rounded-full bg-white shadow-[0_2px_4px_rgba(0,0,0,.35)] transition-transform" :class="{ 'translate-x-8': state[setting.key] }"></span>
+          </button>
+        </div>
+        <div class="flex h-16 items-center justify-between gap-4 border-t border-dashed border-[#3a2a5a] dark:border-[#3a2a5a]">
+          <div class="min-w-0">
+            <p class="truncate text-base/6 font-extrabold">Bakiye</p>
+            <p class="truncate text-[13px]/5 text-[#a99cc8] dark:text-[#a99cc8]">Demo bakiyeyi 10.000,00 krediye döndürür.</p>
+          </div>
+          <button class="h-11 w-[96px] flex-none rounded-[22px] bg-[#9b5cff] font-extrabold text-white shadow-[0_3px_0_#2a0f4a] disabled:cursor-not-allowed disabled:opacity-45" :disabled="state.busy" @click="resetBalance">Sıfırla</button>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <div v-if="dialog.open" class="fixed inset-0 z-20 grid place-items-center bg-[rgba(8,2,18,.72)] p-4" role="dialog" aria-modal="true" @keydown.esc="cancelDialog">
+    <div class="flex h-[400px] w-[min(440px,100%)] flex-col items-center justify-center overflow-hidden rounded-3xl border-4 border-[#b6ff7a] bg-[#1a1030] p-[22px] text-center shadow-[0_20px_50px_rgba(0,0,0,.4)] dark:bg-[#1a1030]">
+      <svg v-if="dialog.icon" class="size-[88px] flex-none" viewBox="0 0 100 100" aria-hidden="true"><use href="#sym-1"/></svg>
+      <h2 class="mb-2 font-[Metamorphous,serif] text-[30px]/[36px] font-normal text-balance text-[#9b5cff]">{{ dialog.title }}</h2>
+      <p v-if="dialog.value" class="mb-2.5 h-12 font-[Metamorphous,serif] text-[44px]/[48px] font-normal whitespace-nowrap text-[#b6ff7a]">{{ dialog.value }}</p>
+      <p class="mb-2.5" v-html="dialog.text"></p>
+      <div ref="dialogButtons" class="mt-2 flex flex-wrap justify-center gap-2">
+        <button v-for="button in dialog.buttons" :key="button.value" class="h-11 min-w-[72px] rounded-[22px] px-[18px] font-extrabold whitespace-nowrap" :class="button.cancel ? 'bg-[#3a2a5a] dark:bg-[#3a2a5a]' : 'bg-[#9b5cff] text-white shadow-[0_3px_0_#2a0f4a]'" @click="closeDialog(button.value)">{{ button.label }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+Vue.createApp({
+  directives: {
+    motion: {
+      mounted(el, { value }) {
+        if (value) el.motion = el.animate(...value);
+      },
+      updated(el, { value, oldValue }) {
+        if (value === oldValue) return;
+        el.motion?.cancel();
+        el.motion = value ? el.animate(...value) : null;
+      },
+    },
+  },
+
+  setup() {
+    const { reactive, ref, computed, watch, nextTick } = Vue;
+
+    const SCATTER = 1;
+    const CHILI = 12;
+    const FOODS = [3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+    const SYMBOLS = {
+      1:  { name: 'Büyü kazanı',     tint: '[--tint:#8dffb8]' },
+      3:  { name: 'Büyücü şapkası',  tint: '[--tint:#b49cff]' },
+      4:  { name: 'Büyü kitabı',     tint: '[--tint:#ff8a9e]' },
+      5:  { name: 'Kristal küre',    tint: '[--tint:#c9a8ff]' },
+      6:  { name: 'Sihirli değnek',  tint: '[--tint:#ffe08a]' },
+      7:  { name: 'Mum',             tint: '[--tint:#ffd08a]' },
+      8:  { name: 'Kırmızı iksir',   tint: '[--tint:#ff8fa3]' },
+      9:  { name: 'Yeşil iksir',     tint: '[--tint:#8dffb8]' },
+      10: { name: 'Mavi iksir',      tint: '[--tint:#8fd4ff]' },
+      11: { name: 'Sihirli mantar',  tint: '[--tint:#ff9db0]' },
+      12: { name: 'Rün taşı',        tint: '[--tint:#b6ff7a]' },
+    };
+
+    const REEL_STRIPS = {
+      base: [
+        [11, 9, 6, 5, 11, 9, 7, 9, 7, 8, 10, 10, 6, 11, 5, 8, 8, 6, 11, 10, 7, 7, 7, 11, 1, 10, 10, 11, 3, 8, 9, 11, 4, 11, 11, 9, 5, 9, 10, 10, 8, 10, 7, 4, 11, 10, 10, 10, 7, 5, 9, 10, 4, 8, 8, 7, 11, 11, 6, 7, 7, 4, 10, 10, 3, 10, 6, 9, 8, 10, 6],
+        [1, 8, 4, 6, 8, 9, 10, 10, 8, 11, 11, 7, 11, 9, 4, 4, 9, 8, 11, 6, 3, 5, 10, 8, 11, 11, 11, 6, 9, 9, 10, 10, 7, 11, 7, 6, 11, 5, 8, 1, 11, 11, 7, 7, 11, 11, 10, 9, 5, 9, 6, 3, 10],
+        [11, 4, 8, 8, 10, 6, 10, 11, 4, 5, 11, 3, 6, 9, 11, 5, 5, 9, 3, 3, 3, 11, 4, 7, 9, 8, 9, 8, 10, 7, 10, 6, 10, 11, 4, 5, 11, 10, 11, 7, 7, 7, 8, 7, 8, 7, 10, 7, 11, 8, 6, 1, 10, 6, 10, 3, 4, 9, 8, 3, 8],
+        [4, 7, 10, 11, 6, 6, 7, 11, 8, 10, 9, 6, 9, 5, 11, 11, 11, 6, 5, 9, 9, 5, 6, 11, 9, 3, 6, 3, 5, 10, 11, 1, 10, 10, 10, 4, 11, 8, 10, 10, 9, 8, 11, 7, 3, 10, 11, 4, 11, 10, 11, 11],
+        [9, 9, 4, 11, 8, 5, 9, 10, 11, 8, 4, 6, 6, 10, 11, 9, 8, 10, 7, 7, 7, 1, 6, 11, 11, 9, 8, 7, 9, 9, 7, 9, 3, 4, 8, 5, 10, 10, 9, 7, 9, 9, 9, 10, 7, 6, 11, 9, 8, 11, 5, 9, 10, 9, 8, 4, 6, 9, 11, 5, 11, 5, 3],
+        [8, 3, 9, 7, 9, 5, 10, 11, 10, 1, 10, 4, 6, 6, 9, 6, 7, 6, 7, 10, 7, 7, 5, 11, 11, 8, 10, 5, 11, 4, 4, 4, 9, 4, 9, 9, 6, 11, 9, 4, 11, 8, 10, 4, 11, 5, 8, 11, 8, 7, 6, 11, 4, 9, 8, 3, 4, 6, 9, 9, 10, 8, 9],
+      ],
+      free: [
+        [9, 9, 3, 7, 9, 11, 6, 8, 4, 6, 5, 12, 8, 10, 10, 11, 8, 10, 11, 11, 5, 10, 10, 10, 9, 10, 8, 11, 10, 10, 8, 3, 10, 4, 6, 1, 11, 11, 7, 4, 8, 9, 10, 7, 6, 11, 9, 5],
+        [3, 5, 6, 11, 11, 9, 1, 12, 7, 11, 5, 9, 9, 11, 7, 4, 10, 4, 5, 3, 10, 10, 9, 11, 6, 6, 10, 8, 11, 9, 8, 4, 9, 10, 7, 10, 8, 10, 8, 8, 9, 6, 11, 8, 12],
+        [5, 9, 1, 7, 7, 11, 8, 5, 11, 4, 10, 9, 3, 11, 8, 4, 6, 5, 6, 12, 10, 3, 10, 10, 7, 7, 7, 10, 7, 8, 10, 4, 7, 11, 6, 9, 11, 9, 6, 4, 7, 8, 8, 9, 8, 10, 3, 11, 6, 8, 4, 11, 8],
+        [10, 5, 11, 10, 11, 11, 5, 3, 11, 8, 8, 10, 1, 9, 10, 6, 9, 10, 10, 5, 5, 10, 10, 10, 12, 9, 9, 11, 3, 10, 11, 4, 7, 6, 8, 6, 9, 10, 11, 7, 3, 11, 7, 9, 6, 4, 4],
+        [10, 7, 8, 4, 9, 11, 9, 12, 9, 11, 11, 8, 10, 9, 9, 4, 8, 5, 10, 11, 6, 7, 7, 7, 10, 6, 3, 10, 9, 8, 9, 9, 11, 8, 10, 1, 7, 6, 5, 7, 11, 5, 6, 8, 7, 11, 3, 4],
+        [8, 10, 9, 9, 4, 7, 6, 10, 10, 9, 8, 5, 9, 6, 8, 3, 11, 10, 5, 9, 11, 4, 6, 11, 11, 8, 11, 7, 9, 1, 10, 8, 12],
+      ],
+    };
+
+    const PAYTABLE = {
+      3:  [10,   25,   50],
+      4:  [2.5,  10,   25],
+      5:  [2,    5,    15],
+      6:  [1.5,  2,    12],
+      7:  [1,    1.5,  10],
+      8:  [0.8,  1.2,  8],
+      9:  [0.5,  1,    5],
+      10: [0.4,  0.9,  4],
+      11: [0.25, 0.75, 2],
+    };
+
+    const SCATTER_PAY = { 4: 3, 5: 5, 6: 100 };
+
+    const BET_LEVELS = [0.01, 0.02, 0.03, 0.04, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.75, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      .map(coin => Math.round(coin * 2000) / 100);
+    const DEFAULT_BET_INDEX = BET_LEVELS.indexOf(2);
+
+    const BASE_MULTIPLIERS = [[2, 40], [3, 25], [4, 15], [5, 10], [10, 6], [25, 3], [50, 1]];
+    const FREE_SPIN_MULTIPLIERS = [
+      [2, 30], [3, 45], [4, 55], [5, 55], [6, 55], [8, 50], [10, 50],
+      [12, 42], [15, 38], [20, 32], [25, 28], [50, 16], [100, 8],
+    ];
+
+    const BASE_CHILI_CHANCE = 0.18;
+    const FREE_SPIN_CHILI_CHANCE = 0.25;
+    const ANTE_SCATTER_CHANCE = 0.22;
+
+    const REEL_COUNT = 6;
+    const ROWS = 5;
+    const MIN_CLUSTER = 8;
+    const SCATTERS_TO_TRIGGER = 4;
+    const SCATTERS_TO_RETRIGGER = 3;
+    const FREE_SPINS_AWARDED = 10;
+    const FREE_SPINS_RETRIGGER = 5;
+    const ANTE_FACTOR = 1.25;
+    const BONUS_BUY_COST_X = 100;
+    const BIG_WIN_X = 15;
+    const MAX_WIN_X = 25000;
+    const START_BALANCE = 10000;
+    const STORAGE_KEY = 'buyu-demo';
+
+    const ROW_TOP = ['top-0', 'top-[20%]', 'top-[40%]', 'top-[60%]', 'top-[80%]'];
+
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const motion = {
+      pulse: reducedMotion ? null : [
+        [
+          { transform: 'scale(1)', filter: 'drop-shadow(0 3px 0 rgba(0,0,0,.28))' },
+          { transform: 'scale(1.13)', filter: 'drop-shadow(0 0 10px #e4ffc8)' },
+        ],
+        { duration: 420, easing: 'ease-in-out', iterations: Infinity, direction: 'alternate' },
+      ],
+      boom: [
+        [{ transform: 'none' }, { transform: 'scale(1.45) rotate(-8deg)', offset: 0.4 }, { transform: 'none' }],
+        { duration: 500, easing: 'ease-out' },
+      ],
+      rise: [
+        [
+          { transform: 'translateY(30px) scale(.6)', opacity: 0 },
+          { transform: 'none', opacity: 1, offset: 0.2 },
+          { opacity: 1, offset: 0.75 },
+          { transform: 'translateY(-50px)', opacity: 0 },
+        ],
+        { duration: 1100, easing: 'ease-out', fill: 'forwards' },
+      ],
+      wobble: reducedMotion ? null : [
+        [{ transform: 'none' }, { transform: 'scale(1.06) rotate(-2deg)' }],
+        { duration: 1000, easing: 'ease-in-out', iterations: Infinity, direction: 'alternate' },
+      ],
+    };
+
+    const money = new Intl.NumberFormat('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const fmt = value => money.format(value);
+    const round2 = value => Math.round(value * 100) / 100;
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+    const randomInt = n => crypto.getRandomValues(new Uint32Array(1))[0] % n;
+    const chance = p => randomInt(1000) < p * 1000;
+
+    function weightedPick(table) {
+      let roll = randomInt(table.reduce((sum, [, weight]) => sum + weight, 0));
+      for (const [value, weight] of table) {
+        roll -= weight;
+        if (roll < 0) return value;
+      }
+      return table[0][0];
+    }
+
+    const state = reactive({
+      balance: START_BALANCE,
+      betIndex: DEFAULT_BET_INDEX,
+      ante: false,
+      turbo: false,
+      sound: true,
+      busy: false,
+      autoSpinsLeft: 0,
+      inFreeSpins: false,
+      freeSpinsLeft: 0,
+      freeSpinsTotal: 0,
+      freeSpinsWin: 0,
+      totalMultiplier: 0,
+      roundWin: 0,
+      lastWin: 0,
+      message: 'Aynı sembolden 8 veya daha fazlası, ekranın herhangi bir yerinde kazandırır.',
+    });
+
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      if ('bal' in saved) state.balance = saved.bal;
+      if ('bi' in saved) state.betIndex = saved.bi;
+      if ('ante' in saved) state.ante = saved.ante;
+      if ('turbo' in saved) state.turbo = saved.turbo;
+      if ('sound' in saved) state.sound = saved.sound;
+    } catch {}
+    if (!(state.betIndex >= 0 && state.betIndex < BET_LEVELS.length)) state.betIndex = DEFAULT_BET_INDEX;
+    if (!(state.balance >= 0)) state.balance = START_BALANCE;
+
+    watch(
+      () => [state.balance, state.betIndex, state.ante, state.turbo, state.sound],
+      ([bal, bi, ante, turbo, sound]) => {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({ bal, bi, ante, turbo, sound }));
+        } catch {}
+      }
+    );
+
+    const baseBet = computed(() => BET_LEVELS[state.betIndex]);
+    const spinCost = computed(() => round2(baseBet.value * (state.ante ? ANTE_FACTOR : 1)));
+    const buyCost = computed(() => round2(baseBet.value * BONUS_BUY_COST_X));
+    const anteBet = computed(() => round2(baseBet.value * ANTE_FACTOR));
+    const autoOn = computed(() => state.autoSpinsLeft > 0);
+    const scaleTime = ms => ms * (state.turbo ? 0.45 : 1) * (reducedMotion ? 0.6 : 1);
+
+    let audio = null;
+
+    function tone(freq, duration = 0.12, wave = 'sine', volume = 0.12, delay = 0) {
+      if (!state.sound) return;
+      try {
+        audio ||= new (window.AudioContext || window.webkitAudioContext)();
+        const start = audio.currentTime + delay;
+        const osc = audio.createOscillator();
+        const gain = audio.createGain();
+        osc.type = wave;
+        osc.frequency.setValueAtTime(freq, start);
+        gain.gain.setValueAtTime(volume, start);
+        gain.gain.exponentialRampToValueAtTime(0.001, start + duration);
+        osc.connect(gain).connect(audio.destination);
+        osc.start(start);
+        osc.stop(start + duration + 0.02);
+      } catch {}
+    }
+
+    const notes = (freqs, duration, wave, volume, gap) =>
+      freqs.forEach((freq, i) => tone(freq, duration, wave, volume, i * gap));
+
+    const sfx = {
+      click:   () => tone(520, 0.05, 'square', 0.04),
+      land:    reel => tone(150 + reel * 12, 0.09, 'triangle', 0.16),
+      win:     () => notes([523, 659, 784], 0.18, 'triangle', 0.1, 0.07),
+      pop:     () => tone(880, 0.07, 'sine', 0.08),
+      scatter: () => notes([784, 988, 1175, 1568], 0.3, 'sine', 0.1, 0.09),
+      chili:   () => { tone(180, 0.35, 'sawtooth', 0.07); tone(360, 0.25, 'square', 0.04, 0.05); },
+      bigWin:  () => notes([523, 659, 784, 1047, 784, 1047, 1319], 0.22, 'triangle', 0.11, 0.11),
+    };
+
+    const board = ref(null);
+    const grid = ref([]);
+    const floats = ref([]);
+    const positions = new Array(REEL_COUNT).fill(0);
+    let reelSet = 'base';
+    let uid = 0;
+
+    const reelEl = reel => board.value.children[reel];
+    const cellEl = (reel, row) => reelEl(reel).children[row];
+    const allCells = () => grid.value.flat();
+    const countSymbol = symbol => allCells().filter(cell => cell.symbol === symbol).length;
+
+    function makeCell(symbol) {
+      const table = state.inFreeSpins ? FREE_SPIN_MULTIPLIERS : BASE_MULTIPLIERS;
+      return { id: ++uid, symbol, multiplier: symbol === CHILI ? weightedPick(table) : 0, win: false, boom: false };
+    }
+
+    function nextFromStrip(reel) {
+      const strip = REEL_STRIPS[reelSet][reel];
+      positions[reel] = (positions[reel] - 1 + strip.length) % strip.length;
+      return strip[positions[reel]];
+    }
+
+    function placeScatter() {
+      for (;;) {
+        const reel = randomInt(REEL_COUNT);
+        const row = randomInt(ROWS);
+        if (grid.value[reel][row].symbol !== SCATTER) {
+          grid.value[reel][row] = makeCell(SCATTER);
+          return;
+        }
+      }
+    }
+
+    function fillGrid(forcedScatters = 0) {
+      grid.value = REEL_STRIPS[reelSet].map((strip, reel) => {
+        positions[reel] = randomInt(strip.length);
+        return Array.from({ length: ROWS }, (_, row) => makeCell(strip[(positions[reel] + row) % strip.length]));
+      });
+
+      if (forcedScatters) {
+        while (countSymbol(SCATTER) < forcedScatters) placeScatter();
+        return;
+      }
+      if (reelSet === 'base' && state.ante && chance(ANTE_SCATTER_CHANCE)) placeScatter();
+
+      const chiliChance = reelSet === 'free' ? FREE_SPIN_CHILI_CHANCE : BASE_CHILI_CHANCE;
+      grid.value.forEach(column => {
+        if (!chance(chiliChance)) return;
+        const row = randomInt(ROWS);
+        if (column[row].symbol !== SCATTER) column[row] = makeCell(CHILI);
+      });
+    }
+
+    function animateDrop(reel, drops, delay) {
+      [...reelEl(reel).children].forEach((el, row) => {
+        const rows = drops[row];
+        if (!rows) return;
+        el.animate(
+          [{ transform: `translateY(${rows * 100}%)` }, { transform: 'none' }],
+          { duration: scaleTime(240 + 35 * Math.abs(rows)), delay, easing: 'cubic-bezier(.3,1.25,.55,1)', fill: 'backwards' }
+        );
+      });
+    }
+
+    async function dropInNewBoard(forcedScatters) {
+      const lastReel = REEL_COUNT - 1;
+
+      for (let reel = 0; reel < REEL_COUNT; reel++) {
+        [...reelEl(reel).children].forEach(el => el.animate(
+          [{ transform: 'none' }, { transform: 'translateY(560%)' }],
+          { duration: scaleTime(240), delay: scaleTime(reel * 35), easing: 'cubic-bezier(.55,0,.9,.5)', fill: 'forwards' }
+        ));
+      }
+      await sleep(scaleTime(240 + lastReel * 35));
+
+      fillGrid(forcedScatters);
+      await nextTick();
+      for (let reel = 0; reel < REEL_COUNT; reel++) {
+        animateDrop(reel, new Array(ROWS).fill(-6), scaleTime(reel * 75));
+        setTimeout(() => sfx.land(reel), scaleTime(reel * 75 + 330));
+      }
+      await sleep(scaleTime(lastReel * 75 + 470));
+    }
+
+    function payout(symbol, count) {
+      const [pay8to9, pay10to11, pay12plus] = PAYTABLE[symbol];
+      if (count >= 12) return pay12plus;
+      if (count >= 10) return pay10to11;
+      return pay8to9;
+    }
+
+    function findWins() {
+      const spotsBySymbol = {};
+      grid.value.forEach((column, reel) => column.forEach((cell, row) => {
+        if (FOODS.includes(cell.symbol)) (spotsBySymbol[cell.symbol] ||= []).push([reel, row]);
+      }));
+
+      let total = 0;
+      const cells = [];
+      const wins = [];
+      for (const [symbol, spots] of Object.entries(spotsBySymbol)) {
+        if (spots.length < MIN_CLUSTER) continue;
+        const amount = round2(payout(symbol, spots.length) * baseBet.value);
+        total += amount;
+        cells.push(...spots);
+        wins.push({ symbol, count: spots.length, amount });
+      }
+      return { total: round2(total), cells, wins };
+    }
+
+    async function tumble(winningCells) {
+      const removed = Array.from({ length: REEL_COUNT }, () => new Set());
+      winningCells.forEach(([reel, row]) => removed[reel].add(row));
+
+      const drops = [];
+      for (let reel = 0; reel < REEL_COUNT; reel++) {
+        const count = removed[reel].size;
+        if (!count) continue;
+
+        const kept = [];
+        grid.value[reel].forEach((cell, row) => {
+          if (!removed[reel].has(row)) kept.push({ cell, from: row });
+        });
+
+        const incoming = new Array(count);
+        for (let i = count - 1; i >= 0; i--) {
+          incoming[i] = { cell: makeCell(nextFromStrip(reel)), from: i - count };
+        }
+
+        const column = [...incoming, ...kept];
+        grid.value[reel] = column.map(item => item.cell);
+        drops[reel] = column.map((item, row) => item.from - row);
+      }
+
+      await nextTick();
+      drops.forEach((rows, reel) => animateDrop(reel, rows, scaleTime(reel * 30)));
+    }
+
+    function floatText(text, big = false) {
+      const id = ++uid;
+      floats.value.push({ id, text, big });
+      setTimeout(() => { floats.value = floats.value.filter(item => item.id !== id); }, 1200);
+    }
+
+    const bigWin = reactive({ show: false, title: '', shown: 0, skipped: false });
+
+    function showBigWin(amount) {
+      return new Promise(resolve => {
+        const timesBet = amount / baseBet.value;
+        Object.assign(bigWin, {
+          show: true,
+          skipped: false,
+          shown: 0,
+          title: timesBet >= 100 ? 'Efsane kazanç!' : timesBet >= 40 ? 'Mega kazanç!' : 'Büyük kazanç!',
+        });
+        sfx.bigWin();
+
+        const duration = scaleTime(2200);
+        const startTime = performance.now();
+        const step = now => {
+          const progress = bigWin.skipped ? 1 : Math.min(1, (now - startTime) / duration);
+          bigWin.shown = amount * (1 - (1 - progress) ** 3);
+          if (progress < 1) {
+            requestAnimationFrame(step);
+            return;
+          }
+          setTimeout(() => {
+            bigWin.show = false;
+            resolve();
+          }, bigWin.skipped ? 120 : scaleTime(900));
+        };
+        requestAnimationFrame(step);
+      });
+    }
+
+    const dialog = reactive({ open: false, icon: false, title: '', value: '', text: '', buttons: [] });
+    const dialogButtons = ref(null);
+    let settleDialog = null;
+    let dialogTimer = 0;
+
+    function openDialog({ icon = false, title, value = '', text = '', buttons, autoCloseMs = 0 }) {
+      return new Promise(resolve => {
+        Object.assign(dialog, { open: true, icon, title, value, text, buttons });
+        settleDialog = resolve;
+        if (autoCloseMs) dialogTimer = setTimeout(() => closeDialog(buttons[0].value), autoCloseMs);
+        nextTick(() => dialogButtons.value?.querySelector('button')?.focus());
+      });
+    }
+
+    function closeDialog(value) {
+      if (!dialog.open) return;
+      clearTimeout(dialogTimer);
+      dialog.open = false;
+      settleDialog(value);
+    }
+
+    function cancelDialog() {
+      const last = dialog.buttons[dialog.buttons.length - 1];
+      if (last.cancel) closeDialog(last.value);
+    }
+
+    async function resolveTumbles() {
+      let win = 0;
+
+      for (;;) {
+        const result = findWins();
+        if (!result.total) break;
+
+        win = round2(win + result.total);
+        result.cells.forEach(([reel, row]) => { grid.value[reel][row].win = true; });
+        sfx.win();
+        state.message = result.wins.map(w => `${SYMBOLS[w.symbol].name} ×${w.count} = ${fmt(w.amount)}`).join(' · ');
+        state.lastWin = win;
+        floatText('+' + fmt(result.total));
+        await sleep(scaleTime(720));
+
+        result.cells.forEach(([reel, row]) => cellEl(reel, row).animate(
+          [{ transform: 'scale(1)' }, { transform: 'scale(1.25)', offset: 0.35 }, { transform: 'scale(0)', opacity: 0 }],
+          { duration: scaleTime(320), fill: 'forwards' }
+        ));
+        sfx.pop();
+        await sleep(scaleTime(330));
+
+        await tumble(result.cells);
+        await sleep(scaleTime(560));
+      }
+
+      return win;
+    }
+
+    async function applyChiliMultipliers(win) {
+      const chilis = allCells().filter(cell => cell.symbol === CHILI);
+      if (win <= 0 || !(chilis.length || (state.inFreeSpins && state.totalMultiplier > 0))) return win;
+
+      const added = chilis.reduce((sum, cell) => sum + cell.multiplier, 0);
+      for (const cell of chilis) {
+        cell.boom = true;
+        sfx.chili();
+        await sleep(scaleTime(240));
+      }
+
+      if (state.inFreeSpins) state.totalMultiplier += added;
+      const multiplier = state.inFreeSpins ? state.totalMultiplier : added;
+      const label = state.inFreeSpins ? 'Toplam çarpan' : 'Rün çarpanı';
+
+      floatText('×' + multiplier, true);
+      state.message = `${label} ×${multiplier}: ${fmt(win)} → ${fmt(win * multiplier)}`;
+      await sleep(scaleTime(950));
+
+      win = round2(win * multiplier);
+      state.lastWin = win;
+      return win;
+    }
+
+    async function handleScatters(win, scatterCount) {
+      const needed = state.inFreeSpins ? SCATTERS_TO_RETRIGGER : SCATTERS_TO_TRIGGER;
+      if (scatterCount < needed) return win;
+
+      allCells().filter(cell => cell.symbol === SCATTER).forEach(cell => { cell.win = true; });
+      sfx.scatter();
+
+      if (!state.inFreeSpins) {
+        const scatterPay = round2(baseBet.value * SCATTER_PAY[Math.min(scatterCount, 6)]);
+        win = round2(win + scatterPay);
+        state.lastWin = win;
+        state.message = `${scatterCount} büyü kazanı! ${fmt(scatterPay)} + ${FREE_SPINS_AWARDED} bedava dönüş`;
+      }
+
+      await sleep(scaleTime(1300));
+      return win;
+    }
+
+    async function playSpin(forcedScatters = 0) {
+      reelSet = state.inFreeSpins ? 'free' : 'base';
+      state.message = state.inFreeSpins ? `Bedava dönüş · toplam çarpan ×${state.totalMultiplier}` : 'Büyü yapılıyor…';
+
+      await dropInNewBoard(forcedScatters);
+
+      let win = await resolveTumbles();
+      win = await applyChiliMultipliers(win);
+
+      const scatterCount = countSymbol(SCATTER);
+      win = await handleScatters(win, scatterCount);
+      win = Math.max(0, Math.min(win, round2(baseBet.value * MAX_WIN_X - state.roundWin)));
+
+      if (win >= baseBet.value * BIG_WIN_X) await showBigWin(win);
+
+      state.balance = round2(state.balance + win);
+      state.roundWin = round2(state.roundWin + win);
+      if (state.inFreeSpins) state.freeSpinsWin = round2(state.freeSpinsWin + win);
+      if (!win && !state.inFreeSpins) state.message = 'Bu sefer olmadı — tekrar dene.';
+
+      return { win, scatterCount };
+    }
+
+    async function runFreeSpins() {
+      await openDialog({
+        icon: true,
+        title: `${FREE_SPINS_AWARDED} bedava dönüş!`,
+        text: 'Bedava dönüşlerde rün taşları daha sık ve daha güçlü parlar. Her rün <b>toplam çarpana</b> eklenir ve kazanan her dönüşü katlar. 3+ kazan = +5 dönüş.',
+        buttons: [{ label: 'Başla', value: 'go' }],
+        autoCloseMs: autoOn.value ? 2200 : 0,
+      });
+
+      Object.assign(state, {
+        inFreeSpins: true,
+        freeSpinsLeft: FREE_SPINS_AWARDED,
+        freeSpinsTotal: FREE_SPINS_AWARDED,
+        freeSpinsWin: 0,
+        totalMultiplier: 0,
+      });
+
+      while (state.freeSpinsLeft > 0 && state.roundWin < baseBet.value * MAX_WIN_X) {
+        state.freeSpinsLeft--;
+        const { scatterCount } = await playSpin();
+
+        if (scatterCount >= SCATTERS_TO_RETRIGGER) {
+          state.freeSpinsLeft += FREE_SPINS_RETRIGGER;
+          state.freeSpinsTotal += FREE_SPINS_RETRIGGER;
+          floatText(`+${FREE_SPINS_RETRIGGER} dönüş`, true);
+          await sleep(scaleTime(1000));
+        }
+        await sleep(scaleTime(280));
+      }
+
+      state.inFreeSpins = false;
+
+      await openDialog({
+        title: 'Bedava dönüşler bitti',
+        value: fmt(state.freeSpinsWin),
+        text: `${state.freeSpinsTotal} dönüşte, son toplam çarpan ×${state.totalMultiplier}. Bu tur toplamı: <b>${fmt(state.roundWin)}</b> (${fmt(state.roundWin / baseBet.value)}× bahis).`,
+        buttons: [{ label: 'Devam', value: 'ok' }],
+        autoCloseMs: autoOn.value ? 2600 : 0,
+      });
+
+      state.lastWin = state.roundWin;
+      state.message = `Bonus turu: ${fmt(state.roundWin)} kazandın.`;
+    }
+
+    async function startRound(isBonusBuy) {
+      if (state.busy) return;
+
+      const price = isBonusBuy ? buyCost.value : spinCost.value;
+      if (state.balance + 1e-9 < price) {
+        state.message = 'Yetersiz bakiye. "Bakiyeyi sıfırla" ile 10.000 krediye dönebilirsin.';
+        state.autoSpinsLeft = 0;
+        return;
+      }
+
+      Object.assign(state, { busy: true, roundWin: 0, lastWin: 0, balance: round2(state.balance - price) });
+      sfx.click();
+
+      const { scatterCount } = await playSpin(isBonusBuy ? SCATTERS_TO_TRIGGER : 0);
+      if (scatterCount >= SCATTERS_TO_TRIGGER) await runFreeSpins();
+
+      if (state.roundWin >= baseBet.value * MAX_WIN_X - 0.005) state.message = 'Maksimum kazanç: bahsin 25.000 katı!';
+      state.busy = false;
+
+      if (autoOn.value) {
+        state.autoSpinsLeft--;
+        if (autoOn.value) setTimeout(() => startRound(false), scaleTime(380));
+      }
+    }
+
+    function spin() {
+      if (autoOn.value) {
+        state.autoSpinsLeft = 0;
+        state.message = 'Otomatik oyun durduruldu.';
+        return;
+      }
+      startRound(false);
+    }
+
+    function changeBet(step) {
+      const index = state.betIndex + step;
+      if (index < 0 || index >= BET_LEVELS.length) return;
+      state.betIndex = index;
+      sfx.click();
+    }
+
+    function toggleAnte() {
+      state.ante = !state.ante;
+      state.message = state.ante ? 'Ante açık: büyü kazanı şansı yaklaşık iki katı, bahis ×1,25.' : 'Ante kapalı.';
+    }
+
+    function toggle(key) {
+      state[key] = !state[key];
+      sfx.click();
+    }
+
+    const panel = ref(null);
+    const panelClose = ref(null);
+
+    function openPanel(name) {
+      panel.value = name;
+      nextTick(() => panelClose.value?.focus());
+    }
+
+    function closePanel() {
+      panel.value = null;
+    }
+
+    const settings = [
+      { key: 'sound', label: 'Ses', hint: 'Oyun efektleri' },
+      { key: 'turbo', label: 'Turbo dönüş', hint: 'Animasyonlar daha hızlı oynar' },
+    ];
+
+    async function resetBalance() {
+      closePanel();
+      const answer = await openDialog({
+        title: 'Bakiyeyi sıfırla?',
+        text: 'Demo bakiyen 10.000,00 krediye döner.',
+        buttons: [{ label: 'Sıfırla', value: 'yes' }, { label: 'Vazgeç', value: 'no', cancel: true }],
+      });
+      if (answer !== 'yes') return;
+      Object.assign(state, { balance: START_BALANCE, lastWin: 0, message: 'Bakiye 10.000,00 krediye sıfırlandı.' });
+    }
+
+    async function buyBonus() {
+      if (state.busy || state.ante) return;
+      const answer = await openDialog({
+        icon: true,
+        title: 'Bonus satın al',
+        text: `10 bedava dönüş, bedeli <b>${fmt(buyCost.value)}</b> (bahsin 100 katı).`,
+        buttons: [{ label: 'Satın al', value: 'yes' }, { label: 'Vazgeç', value: 'no', cancel: true }],
+      });
+      if (answer === 'yes') startRound(true);
+    }
+
+    async function chooseAutoplay() {
+      if (state.busy) return;
+      const answer = await openDialog({
+        title: 'Otomatik oyun',
+        text: 'Kaç dönüş oynansın? Döndür düğmesiyle istediğin an durdurabilirsin.',
+        buttons: [
+          { label: '10', value: '10' },
+          { label: '25', value: '25' },
+          { label: '50', value: '50' },
+          { label: '100', value: '100' },
+          { label: 'Vazgeç', value: '0', cancel: true },
+        ],
+      });
+      const spins = Number(answer);
+      if (spins > 0) {
+        state.autoSpinsLeft = spins;
+        startRound(false);
+      }
+    }
+
+    const paytable = computed(() => {
+      const amounts = list => list.map(x => fmt(x * baseBet.value));
+      return {
+        foods: FOODS.map(symbol => ({ symbol, name: SYMBOLS[symbol].name, amounts: amounts(PAYTABLE[symbol]) })),
+        scatter: amounts([SCATTER_PAY[4], SCATTER_PAY[5], SCATTER_PAY[6]]),
+      };
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.code !== 'Space' || dialog.open || panel.value) return;
+      if (/INPUT|TEXTAREA|BUTTON/.test(document.activeElement?.tagName || '')) return;
+      e.preventDefault();
+      if (autoOn.value) state.autoSpinsLeft = 0;
+      else startRound(false);
+    });
+
+    fillGrid();
+
+    return {
+      CHILI, SYMBOLS, ROW_TOP, BET_LEVELS, motion,
+      state, grid, floats, bigWin, dialog, board, dialogButtons,
+      baseBet, spinCost, buyCost, anteBet, autoOn, paytable, panel, panelClose, settings,
+      fmt, spin, changeBet, toggle, toggleAnte, buyBonus, chooseAutoplay, resetBalance,
+      openPanel, closePanel, closeDialog, cancelDialog,
+    };
+  },
+}).mount('#app');
+</script>
+</body>
+</html>
